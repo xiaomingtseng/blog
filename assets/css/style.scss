@@ -1,0 +1,327 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* 自定義樣式 - 提高可讀性與 Dark Mode */
+
+/* CSS 變數定義 */
+:root,
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --text-secondary: #555;
+  --heading-color: #1a1a1a;
+  --link-color: #0366d6;
+  --link-hover: #0056b3;
+  --border-color: #e1e4e8;
+  --code-bg: #f6f8fa;
+  --code-text: #e83e8c;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.05);
+  --card-shadow-hover: rgba(0,0,0,0.1);
+  --footer-bg: #f6f8fa;
+  --blockquote-border: #0366d6;
+  --blockquote-bg: #f6f8fa;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e4e4e4;
+  --text-secondary: #b0b0b0;
+  --heading-color: #ffffff;
+  --link-color: #58a6ff;
+  --link-hover: #79c0ff;
+  --border-color: #30363d;
+  --code-bg: #161b22;
+  --code-text: #ff7b72;
+  --card-bg: #0d1117;
+  --card-shadow: rgba(0,0,0,0.3);
+  --card-shadow-hover: rgba(0,0,0,0.5);
+  --footer-bg: #0d1117;
+  --blockquote-border: #58a6ff;
+  --blockquote-bg: #161b22;
+}
+
+/* Dark Mode 切換按鈕 */
+.dark-mode-toggle {
+  background: none;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--code-bg);
+  border-color: var(--link-color);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+  .dark-mode-toggle {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}
+
+/* 整體頁面優化 */
+html {
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "微軟正黑體", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wrapper {
+  background-color: var(--bg-color);
+}
+
+.page-content {
+  background-color: var(--bg-color);
+}
+
+.site-header {
+  border-top: 5px solid var(--link-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color) !important;
+}
+
+/* 標題樣式優化 */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--heading-color) !important;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+/* 段落優化 */
+p {
+  margin-bottom: 1.2em;
+  font-size: 1.05em;
+  color: var(--text-color) !important;
+}
+
+/* 連結樣式 */
+a {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+}
+
+/* 列表樣式優化 */
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+  color: var(--text-color) !important;
+}
+
+/* 引用區塊 */
+blockquote {
+  border-left: 4px solid var(--blockquote-border);
+  padding-left: 1em;
+  margin: 1.5em 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  background-color: var(--blockquote-bg);
+  padding: 1em;
+  border-radius: 4px;
+}
+
+/* 代碼區塊優化 */
+code {
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  color: var(--code-text);
+}
+
+pre {
+  background-color: var(--code-bg);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--border-color);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 0.95em;
+}
+
+/* 文章卡片樣式 */
+.post-list > li {
+  padding: 1.2em;
+  margin-bottom: 1.5em;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px var(--card-shadow);
+}
+
+.post-list > li:hover {
+  box-shadow: 0 4px 12px var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.post-meta {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.site-title {
+  color: var(--heading-color) !important;
+  font-weight: 600;
+}
+
+.site-nav .page-link {
+  color: var(--text-color) !important;
+}
+
+.site-nav .page-link:hover {
+  color: var(--link-color) !important;
+}
+
+/* Footer 優化 */
+.site-footer {
+  background-color: var(--footer-bg) !important;
+  border-top: 1px solid var(--border-color) !important;
+  padding: 2em 0;
+  color: var(--text-secondary) !important;
+}
+
+.footer-heading {
+  color: var(--heading-color) !important;
+}
+
+.contact-list a,
+.social-media-list a {
+  color: var(--text-color) !important;
+}
+
+.contact-list a:hover,
+.social-media-list a:hover {
+  color: var(--link-color) !important;
+}
+
+/* 圖片優化 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .post-list > li {
+    padding: 1em;
+  }
+}
+
+/* 文章內容區域 */
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  color: var(--text-color);
+}
+
+.post-content img {
+  display: block;
+  margin: 1.5em auto;
+  box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+/* 表格樣式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+table th,
+table td {
+  border: 1px solid var(--border-color);
+  padding: 0.5em;
+  color: var(--text-color);
+}
+
+table th {
+  background-color: var(--code-bg);
+  font-weight: 600;
+}
+
+/* 水平分隔線 */
+hr {
+  border: 0;
+  border-top: 2px solid var(--border-color);
+  margin: 2em 0;
+}
