@@ -10,5 +10,6 @@ permalink: /about/
 
 ## 聯絡方式
 
-- GitHub: [xiaomingtseng](https://github.com/xiaomingtseng)
-- Email: your-email@example.com
+- **GitHub**: [xiaomingtseng](https://github.com/xiaomingtseng)
+- **Email**: [bbt2587898123@gmail.com](mailto:bbt2587898123@gmail.com)
+- **LinkedIn**: [Chien-Chih Tseng](https://www.linkedin.com/in/chien-chih-tseng-4b2876193)

@@ -4,6 +4,15 @@ description: 歡迎來到我的部落格
 baseurl: "/blog" # 如果您的倉庫名稱是 blog
 url: "https://xiaomingtseng.github.io" # 您的 GitHub Pages URL
 
+# Author settings
+author:
+  name: Chien-Chih Tseng
+  email: bbt2587898123@gmail.com
+
+# Social media
+github_username: xiaomingtseng
+linkedin_username: chien-chih-tseng-4b2876193
+
 # Build settings
 markdown: kramdown
 theme: minima
