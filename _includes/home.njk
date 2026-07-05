@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+<div class="rh-intro">四個類型，各挑最近幾篇。</div>
+<div class="rh-cards">
+  {% for key, meta in TYPES %}
+  <div class="rh-card">
+    <div class="rh-card-head">
+      <span class="rh-card-dot" style="background:var(--c-{{ 'lit' if key == 'literature' else key }})"></span>
+      <a class="rh-card-title" href="/notes/?type={{ key }}">{{ meta.label }}</a>
+      <span class="rh-card-count">{{ collections[key].length }}</span>
+    </div>
+    <ul class="rh-card-list">
+      {% for post in collections[key] | limit(2) %}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        <div class="rh-card-meta">{{ post.date | date("MM-dd") }} · {% for tag in post.data.tags | limit(2) %}#{{ tag }} {% endfor %}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="rh-card-more" href="/notes/?type={{ key }}" style="color:var(--c-{{ 'lit' if key == 'literature' else key }})">查看全部 →</a>
+  </div>
+  {% endfor %}
+</div>

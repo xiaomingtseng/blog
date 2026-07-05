@@ -1,0 +1,42 @@
+---
+layout: base.njk
+---
+<div class="list-page" data-list-page>
+  <h1 class="list-title">全部筆記</h1>
+
+  <div class="type-filter">
+    <button class="type-chip" data-type-chip="">全部</button>
+    {% for key, meta in TYPES %}
+    <button class="type-chip" data-type-chip="{{ key }}" style="--active-bg:var(--c-{{ 'lit' if key == 'literature' else key }})">{{ meta.label }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="tag-filter">
+    {% for tag in collections.allTags %}
+    <button class="tag-chip" data-tag-chip="{{ tag }}">#{{ tag }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="active-filters" data-active-filters style="display:none">
+    <span>過濾中：</span>
+    <span class="clear" data-clear-filters>清除全部</span>
+    <span class="result-count" data-result-count></span>
+  </div>
+
+  <div class="list-rows">
+    {% for post in collections.posts %}
+    <a class="list-row" href="{{ post.url }}" data-list-row data-type="{{ post.data.type }}" data-tags="{{ post.data.tags | join(',') }}">
+      <div class="list-row-meta">
+        <span class="list-row-dot" style="background:var(--c-{{ 'lit' if post.data.type == 'literature' else post.data.type }})"></span>
+        {{ TYPES[post.data.type].label }}
+        <span style="margin-left:auto">{{ post.date | date("yyyy-MM-dd") }}</span>
+      </div>
+      <div class="list-row-title">{{ post.data.title }}</div>
+      <div class="list-row-summary">{{ post.data.summary }}</div>
+      <div class="list-row-tags">
+        {% for tag in post.data.tags %}<span>#{{ tag }}</span>{% endfor %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

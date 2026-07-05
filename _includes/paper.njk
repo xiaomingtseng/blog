@@ -1,0 +1,88 @@
+---
+layout: base.njk
+---
+<div class="post-page">
+  <div class="post-topbar">
+    <a class="tt" href="/" style="font:500 12.5px var(--font-sans);color:var(--ink-soft)">← {{ SITE.title }}</a>
+    <span class="sep">/</span>
+    <a class="tt type-link" href="/notes/?type=literature" style="color:var(--c-lit)">文獻筆記</a>
+    <div class="post-topbar-ctrls">
+      <a class="btn-chip" href="/feed.xml">RSS</a>
+      <button class="btn-chip" data-theme-toggle aria-label="切換深色模式"><span data-theme-glyph>☾</span></button>
+    </div>
+  </div>
+
+  <div class="post-layout">
+    <aside class="post-toc">
+      <div class="post-toc-label">目錄</div>
+      <nav data-toc-nav></nav>
+    </aside>
+
+    <article>
+      <div class="post-type-label" style="color:var(--c-lit)">文獻筆記</div>
+
+      {% if paper %}
+      <div class="paper-card">
+        <div class="paper-eyebrow">PAPER</div>
+        <div class="paper-title">{{ paper.title }}</div>
+        <div class="paper-authors">
+          <span>{{ paper.authors | join(", ") }}</span>
+          <span class="sep">·</span>
+          <span style="font-family:var(--font-mono)">{{ paper.year }}</span>
+          {% if paper.venue %}<span class="sep">·</span><span class="venue">{{ paper.venue }}</span>{% endif %}
+        </div>
+        {% if paper.tldr %}
+        <div class="paper-tldr">
+          <span class="lbl">TL;DR</span>
+          <span class="txt">{{ paper.tldr }}</span>
+        </div>
+        {% endif %}
+        <div class="paper-links">
+          {% if paper.link %}<a class="primary" href="{{ paper.link }}">論文 ↗</a>{% endif %}
+          {% if paper.pdf %}<a class="secondary" href="{{ paper.pdf }}">PDF</a>{% endif %}
+          {% if paper.doi %}<a class="secondary" href="https://doi.org/{{ paper.doi }}">DOI</a>{% endif %}
+        </div>
+      </div>
+      {% else %}
+      <h1 class="post-title">{{ title }}</h1>
+      {% endif %}
+
+      <div class="post-tags" style="margin-top:14px">
+        {% for tag in tags %}<a href="/notes/?tag={{ tag }}">#{{ tag }}</a>{% endfor %}
+      </div>
+
+      <div class="post-body" style="margin-top:20px">
+        {{ content | safe }}
+      </div>
+
+      {% set prevPost = collections.posts | getPreviousCollectionItem %}
+      {% set nextPost = collections.posts | getNextCollectionItem %}
+      {% if prevPost or nextPost %}
+      <div class="post-pagenav">
+        {% if prevPost %}
+        <a class="prev" href="{{ prevPost.url }}"><div class="label">← 上一篇</div><div class="title">{{ prevPost.data.title }}</div></a>
+        {% else %}<span></span>{% endif %}
+        {% if nextPost %}
+        <a class="next" href="{{ nextPost.url }}"><div class="label">下一篇 →</div><div class="title">{{ nextPost.data.title }}</div></a>
+        {% else %}<span></span>{% endif %}
+      </div>
+      {% endif %}
+
+      {% set relatedPosts = collections.posts | related(page.url, tags, 2) %}
+      {% if relatedPosts.length %}
+      <div class="post-related">
+        <div class="post-related-label">相關文章</div>
+        <div class="post-related-list">
+          {% for r in relatedPosts %}
+          <a href="{{ r.url }}">
+            <span class="post-related-dot" style="background:var(--c-{{ 'lit' if r.data.type == 'literature' else r.data.type }})"></span>
+            <span class="post-related-title">{{ r.data.title }}</span>
+            <span class="post-related-type">{{ TYPES[r.data.type].label }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</div>
