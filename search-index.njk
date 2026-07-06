@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {%- for p in collections.posts -%}
   {
     "title": {{ p.data.title | dump | safe }},
-    "url": {{ p.url | dump | safe }},
+    "url": {{ p.url | url | dump | safe }},
     "type": {{ p.data.type | dump | safe }},
     "tags": {{ (p.data.tags or []) | dump | safe }},
     "summary": {{ (p.data.summary or "") | dump | safe }},

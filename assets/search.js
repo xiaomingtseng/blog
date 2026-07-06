@@ -1,12 +1,13 @@
-import Fuse from "/assets/vendor/fuse.min.mjs";
+import Fuse from "./vendor/fuse.min.mjs";
 
 (function () {
   var input = document.querySelector("[data-search-input]");
   var results = document.querySelector("[data-search-results]");
   if (!input || !results) return;
 
+  var base = (window.DEEPWATER_BASE || "/").replace(/\/$/, "");
   var fuse = null;
-  fetch("/search-index.json")
+  fetch(base + "/search-index.json")
     .then(function (r) { return r.json(); })
     .then(function (data) {
       fuse = new Fuse(data, { keys: ["title", "summary", "tags"], threshold: 0.35 });

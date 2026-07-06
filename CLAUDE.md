@@ -16,7 +16,19 @@ npm run build    # eleventy production build → _site/
 
 There is no test suite, linter, or type checker configured — verify changes by running `npm run dev` and checking the rendered pages.
 
-Deployment is automatic: `.github/workflows/deploy.yml` runs `npm ci && npm run build` and publishes `_site/` to GitHub Pages on push to `main` (or manual `workflow_dispatch`). There's no separate staging step — pushing to `main` is a production deploy.
+Deployment is automatic: `.github/workflows/deploy.yml` runs `npm ci && npm run build` and publishes `_site/` to GitHub Pages on push to `main` (or manual `workflow_dispatch`). There's no separate staging step — pushing to `main` is a production deploy. On GitHub's side, Pages must be set to **Source: GitHub Actions** under repo Settings → Pages, or the deploy job 404s.
+
+## Deploying under a subpath (pathPrefix)
+
+This repo is named `blog` (not `<user>.github.io`), so GitHub Pages serves it at `https://xiaomingtseng.github.io/blog/`, a subpath — not the domain root. `eleventy.config.js` sets `pathPrefix: "/blog/"` to account for this, and `SITE.url` is deliberately the bare origin (`https://xiaomingtseng.github.io`, no `/blog`) so it composes cleanly with `pathPrefix` rather than duplicating the subpath.
+
+Templates use **plain root-relative paths** (`href="/notes/"`, `src="/assets/style.css"`, `{{ post.url }}`) with no manual `| url` filter. Prefixing happens automatically: `eleventy-plugin-rss`'s `feedPlugin` internally registers Eleventy's built-in HTML `<base>` plugin, which rewrites every `href`/`src` in all HTML output to prepend `pathPrefix`. Do not add `| url` filters back into the `.njk` templates — combining them with this plugin's auto-rewrite double- (or triple-)prefixes every link, which is exactly how the "CSS/links missing after deploy" bug happened before. The `feedPlugin` call passes `htmlBasePluginOptions: { extensions: "" }`, which is required — without it, the auto-rewrite itself applies the prefix twice.
+
+Two places still need the `| url` filter manually, because they're outside the plugin's `.html`-only auto-rewrite:
+- `search-index.njk` (JSON output) — `p.url | url` so client-side search results link correctly.
+- `base.njk`'s inline `<script>window.DEEPWATER_BASE = "{{ '/' | url }}"</script>` — the auto-rewrite only touches `href`/`src` attributes, not script text, and `assets/search.js` reads `window.DEEPWATER_BASE` to prefix its `fetch("/search-index.json")` call at runtime (its Fuse.js import is a relative `./vendor/fuse.min.mjs` instead, which sidesteps the prefix problem entirely since module specifiers resolve against the importing script's own URL).
+
+If this ever moves to a root domain (e.g. renaming the repo to `xiaomingtseng.github.io`), set `pathPrefix: "/"` (the default) and nothing else should need to change.
 
 ## Site configuration
 

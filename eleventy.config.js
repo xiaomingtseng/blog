@@ -1,4 +1,3 @@
-import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
@@ -10,7 +9,7 @@ import { DateTime } from "luxon";
 const SITE = {
   title: "深水筆記 Deepwater",
   description: "研究歷程、文獻批註與留學生活紀錄。", // ← 側欄小簡介，換成你想要的文案
-  url: "https://github.com/xiaomingtseng/blog", // ← 換成你的 Pages 網址（例如 https://xiaomingtseng.github.io/deepwater-notes）
+  url: "https://xiaomingtseng.github.io", // ← GitHub Pages 網址的 origin（不含 /blog；子路徑由下面 pathPrefix 統一處理）
   author: "Brian Tseng", // ← 側欄作者名稱
   github: "https://github.com/xiaomingtseng",        // ← 側欄 GitHub 連結
 };
@@ -75,9 +74,6 @@ export default function (eleventyConfig) {
   // ---- 陣列截取（nunjucks 內建的 slice 語意跟 JS array.slice 不同，另外提供一個）----
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
 
-  // Obsidian [[wiki-link]] → 之後可加自訂處理；先讓一般 md 連結正常運作
-  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-
   // 靜態資產：Obsidian 的附件資料夾（圖片）、自訂 CSS/JS，與 KaTeX / Fuse.js 的 vendor 檔
   eleventyConfig.addPassthroughCopy({ "notes/attachments": "attachments" });
   eleventyConfig.addPassthroughCopy("assets");
@@ -123,6 +119,9 @@ export default function (eleventyConfig) {
   });
 
   // ---- RSS：build 產 /feed.xml（最新 20 篇）----
+  // htmlBasePluginOptions.extensions: "" 是關掉這個外掛預設會啟用、套用到全站 .html
+  // 輸出的自動 pathPrefix 轉換（Eleventy 內建的 html-base plugin）。不關掉的話，同一個
+  // pathPrefix 在這個版本的組合下會被算兩次，全站連結/資源路徑都會多一段 /blog。
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
@@ -133,6 +132,7 @@ export default function (eleventyConfig) {
       base: SITE.url,
       author: { name: SITE.author },
     },
+    htmlBasePluginOptions: { extensions: "" },
   });
 
   // 給模板用的常數
@@ -143,5 +143,6 @@ export default function (eleventyConfig) {
     dir: { input: ".", includes: "_includes", output: "_site" },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
+    pathPrefix: "/blog/",
   };
 }
