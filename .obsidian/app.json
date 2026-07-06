@@ -1,0 +1,7 @@
+{
+  "userIgnoreFilters": [
+    "_site/",
+    "node_modules/"
+  ],
+  "attachmentFolderPath": "notes/attachments"
+}

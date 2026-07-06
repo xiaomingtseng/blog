@@ -9,7 +9,7 @@ import { DateTime } from "luxon";
 const SITE = {
   title: "深水筆記 Deepwater",
   description: "研究歷程、文獻批註與留學生活紀錄。", // ← 側欄小簡介，換成你想要的文案
-  url: "https://xiaomingtseng.github.io", // ← GitHub Pages 網址的 origin（不含 /blog；子路徑由下面 pathPrefix 統一處理）
+  url: "https://xiaomingtseng.github.io",
   author: "Brian Tseng", // ← 側欄作者名稱
   github: "https://github.com/xiaomingtseng",        // ← 側欄 GitHub 連結
 };
