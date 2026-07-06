@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ffdbdea08066c564",
+        "id": "c922150dbe7e6d1c",
         "type": "tabs",
         "children": [
           {
-            "id": "806d8ebc4142dce2",
+            "id": "dc1e1c1fce477bfa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/research/yolov8-augmentation.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "yolov8-augmentation"
+              "title": "新分頁"
             }
           }
         ]
@@ -161,13 +157,23 @@
               "icon": "lucide-list",
               "title": "大綱"
             }
+          },
+          {
+            "id": "27bc5794d0d732fb",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,10 +187,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "806d8ebc4142dce2",
+  "active": "dc1e1c1fce477bfa",
   "lastOpenFiles": [
+    "attachments/aug-compare.png.md",
+    "attachments",
     "notes/research/yolov8-augmentation.md",
-    "notes/attachments",
-    "CLAUDE.md"
+    "CLAUDE.md",
+    "notes/attachments"
   ]
 }
