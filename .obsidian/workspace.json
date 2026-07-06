@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/未命名.md",
-                "mode": "source",
-                "source": false
+                "file": "notes/literature/未來筆記測試.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "未來筆記測試"
             }
           }
         ]
@@ -194,8 +194,10 @@
   },
   "active": "0285ef314fee62e3",
   "lastOpenFiles": [
+    "未命名.md",
+    "notes/literature/未來筆記測試.md",
     "notes/research/yolov8-augmentation.md",
-    "notes/literature/未命名.md",
+    "SCHEMA.md",
     "notes/research/未命名.md",
     "notes/literature/deepfish-2020.md",
     "attachments/aug-compare.png.md",

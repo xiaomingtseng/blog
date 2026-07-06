@@ -3,19 +3,7 @@
 Obsidian 寫筆記 → push → GitHub Actions 自動 build → GitHub Pages 發布。
 純靜態輸出，無後端。已依照 Claude Design 設計稿（側欄導覽 + sticky TOC + 文獻論文卡 + 類型/標籤過濾）完整實作。
 
-## 上線前一定要改的地方
-
-`eleventy.config.js` 最上面的 `SITE` 物件：
-
-```js
-const SITE = {
-  title: "深水筆記 Deepwater",
-  description: "...",                                   // 側欄小簡介
-  url: "https://your-username.github.io/your-repo",     // ← 換成你的 Pages 網址
-  author: "你的名字",
-  github: "https://github.com/your-username",           // ← 側欄 GitHub 連結
-};
-```
+Site :[Blog](https://xiaomingtseng.github.io/blog/)
 
 ## 檔案結構
 
@@ -107,12 +95,6 @@ paper:
 npm install
 npm run dev      # http://localhost:8080，存檔即重載
 ```
-
-## 上線步驟
-
-1. GitHub repo → Settings → Pages → Source 選 **GitHub Actions**。
-2. `eleventy.config.js` 裡的 `SITE.url` 換成你的 Pages 網址。
-3. push 到 `main`，Actions 自動 build 並發布。
 
 ## 之後想擴充
 
