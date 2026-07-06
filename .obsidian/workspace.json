@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/deepfish-2020.md",
+                "file": "notes/literature/ResNet 閱讀筆記.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "deepfish-2020"
+              "title": "ResNet 閱讀筆記"
             }
           }
         ]
@@ -193,8 +193,9 @@
   },
   "active": "0285ef314fee62e3",
   "lastOpenFiles": [
-    "notes/literature/未來筆記測試.md",
     "notes/literature/deepfish-2020.md",
+    "notes/literature/ResNet 閱讀筆記.md",
+    "notes/literature/未來筆記測試.md",
     "notes/research/yolov8-augmentation.md",
     "未命名.md",
     "SCHEMA.md",
