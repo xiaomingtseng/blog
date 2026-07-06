@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/未來筆記測試.md",
+                "file": "notes/literature/deepfish-2020.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "未來筆記測試"
+              "title": "deepfish-2020"
             }
           }
         ]
@@ -177,8 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,8 +193,8 @@
   },
   "active": "0285ef314fee62e3",
   "lastOpenFiles": [
-    "未命名.md",
     "notes/literature/未來筆記測試.md",
+    "未命名.md",
     "notes/research/yolov8-augmentation.md",
     "SCHEMA.md",
     "notes/research/未命名.md",
