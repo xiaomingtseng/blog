@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c922150dbe7e6d1c",
+        "id": "d4dc4e8f53829f19",
         "type": "tabs",
         "children": [
           {
-            "id": "dc1e1c1fce477bfa",
+            "id": "0285ef314fee62e3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "notes/literature/未命名.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "未命名"
             }
           }
         ]
@@ -173,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,11 +192,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc1e1c1fce477bfa",
+  "active": "0285ef314fee62e3",
   "lastOpenFiles": [
+    "notes/research/yolov8-augmentation.md",
+    "notes/literature/未命名.md",
+    "notes/research/未命名.md",
+    "notes/literature/deepfish-2020.md",
     "attachments/aug-compare.png.md",
     "attachments",
-    "notes/research/yolov8-augmentation.md",
     "CLAUDE.md",
     "notes/attachments"
   ]
