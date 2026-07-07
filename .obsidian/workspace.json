@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "notes/literature/ResNet 閱讀筆記.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "ResNet 閱讀筆記"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "notes/literature/ResNet 閱讀筆記.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "CLAUDE 的對外連結"
+              "title": "ResNet 閱讀筆記 的對外連結"
             }
           },
           {
@@ -175,7 +175,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -196,6 +196,7 @@
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
     "notes/research/yolov8-augmentation.md",
+    "CLAUDE.md",
     "attachments/aug-compare.png.md",
     "notes/literature/ResNet 閱讀筆記.md",
     "2026-07-07.md",
@@ -207,7 +208,6 @@
     "SCHEMA.md",
     "notes/research/未命名.md",
     "attachments",
-    "CLAUDE.md",
     "notes/attachments"
   ]
 }
