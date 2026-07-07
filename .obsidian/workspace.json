@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/yolov8-augmentation.md",
+                "file": "notes/literature/ResNet 閱讀筆記.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "yolov8-augmentation"
+              "title": "ResNet 閱讀筆記"
             }
           }
         ]
@@ -191,14 +191,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0660b227451be15f",
+  "active": "0285ef314fee62e3",
   "lastOpenFiles": [
+    "notes/research/yolov8-augmentation.md",
+    "notes/literature/ResNet 閱讀筆記.md",
     "2026-07-07.md",
     "notes/idea/碩零準備.md",
     "notes/life",
-    "notes/research/yolov8-augmentation.md",
     "notes/idea",
-    "notes/literature/ResNet 閱讀筆記.md",
     "notes/literature/deepfish-2020.md",
     "notes/literature/未來筆記測試.md",
     "SCHEMA.md",
