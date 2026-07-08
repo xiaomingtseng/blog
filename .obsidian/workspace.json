@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/ResNet 閱讀筆記.md",
-                "mode": "source",
-                "source": false,
+                "file": "notes/literature/ViT 閱讀筆記.md",
+                "mode": "preview",
+                "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ResNet 閱讀筆記"
+              "title": "ViT 閱讀筆記"
             }
           }
         ]
@@ -195,10 +195,14 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
+    "notes/literature/EfficientNet 閱讀筆記.md",
+    "notes/literature/AlexNet 閱讀筆記.md",
+    "notes/literature/VGG 閱讀筆記.md",
+    "notes/literature/ResNet 閱讀筆記.md",
+    "notes/literature/ViT 閱讀筆記.md",
     "notes/research/yolov8-augmentation.md",
     "CLAUDE.md",
     "attachments/aug-compare.png.md",
-    "notes/literature/ResNet 閱讀筆記.md",
     "2026-07-07.md",
     "notes/idea/碩零準備.md",
     "notes/life",
