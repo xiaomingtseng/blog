@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/ViT 閱讀筆記.md",
-                "mode": "preview",
+                "file": "notes/idea/碩零準備.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ViT 閱讀筆記"
+              "title": "碩零準備"
             }
           }
         ]
@@ -195,16 +195,18 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
+    "Clippings/Biohub - Cell Tracking During Development.md",
+    "notes/idea/碩零準備.md",
+    "Clippings",
+    "notes/literature/ViT 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
     "notes/literature/VGG 閱讀筆記.md",
     "notes/literature/ResNet 閱讀筆記.md",
-    "notes/literature/ViT 閱讀筆記.md",
     "notes/research/yolov8-augmentation.md",
     "CLAUDE.md",
     "attachments/aug-compare.png.md",
     "2026-07-07.md",
-    "notes/idea/碩零準備.md",
     "notes/life",
     "notes/idea",
     "notes/literature/deepfish-2020.md",
