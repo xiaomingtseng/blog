@@ -193,11 +193,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ff3bf67e2e3dea00",
+  "active": "27bc5794d0d732fb",
   "lastOpenFiles": [
+    "_site/notes/ViT 閱讀筆記/index.html",
+    "_site/notes/ViT 閱讀筆記",
+    "_site/notes/VGG 閱讀筆記/index.html",
+    "_site/notes/VGG 閱讀筆記",
+    "_site/notes/ResNet 閱讀筆記/index.html",
+    "_site/notes/ResNet 閱讀筆記",
+    "_site/notes/EfficientNet 閱讀筆記/index.html",
+    "_site/notes/EfficientNet 閱讀筆記",
+    "_site/notes/AlexNet 閱讀筆記/index.html",
+    "_site/notes/AlexNet 閱讀筆記",
+    "_site/notes/碩零準備/index.html",
+    "_site/attachments/aug-compare.png",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/idea/碩零準備.md",
-    "Clippings",
     "notes/literature/ViT 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
@@ -207,13 +218,9 @@
     "CLAUDE.md",
     "attachments/aug-compare.png.md",
     "2026-07-07.md",
-    "notes/life",
-    "notes/idea",
     "notes/literature/deepfish-2020.md",
     "notes/literature/未來筆記測試.md",
     "SCHEMA.md",
-    "notes/research/未命名.md",
-    "attachments",
-    "notes/attachments"
+    "notes/research/未命名.md"
   ]
 }
