@@ -29,6 +29,5 @@ transform = A.Compose([
 ])
 ```
 
-![增強前後對照](attachments/aug-compare.png)
 
 [^1]: 時段差異主要來自餵食前後的魚群密度與水體濁度。
