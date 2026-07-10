@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
@@ -5,6 +7,43 @@ import footnote from "markdown-it-footnote";
 import katex from "markdown-it-katex";
 import anchor from "markdown-it-anchor";
 import { DateTime } from "luxon";
+
+// ---- Obsidian wikilink（[[筆記名]] / [[筆記名|別名]]）解析 ----
+// vault 裡的筆記彼此用 [[檔名]] 互相參照，markdown-it 本身看不懂這個語法。
+// 這裡在 build 時掃一次 notes/ 和 Clippings/（兩者維持各自原本的資料夾位置），
+// 用「檔名 → 網址」建一份對照表，找不到對應筆記的 wikilink 就退回純文字（不留下方括號）。
+function buildWikilinkMap() {
+  const map = new Map();
+  const scan = (dir, urlPrefix) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isDirectory()) scan(path.join(dir, entry.name), urlPrefix);
+      else if (entry.name.endsWith(".md")) {
+        const name = entry.name.slice(0, -3);
+        map.set(name, `${urlPrefix}${name}/`);
+      }
+    }
+  };
+  scan("notes", "/notes/");
+  scan("Clippings", "/clippings/");
+  return map;
+}
+
+function resolveWikilinks(src, map) {
+  let inFence = false;
+  return src
+    .split("\n")
+    .map((line) => {
+      if (/^\s*```/.test(line)) inFence = !inFence;
+      if (inFence) return line;
+      return line.replace(/\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g, (m, target, alias) => {
+        const url = map.get(target.trim());
+        const label = (alias || target).trim();
+        return url ? `[${label}](${url})` : label;
+      });
+    })
+    .join("\n");
+}
 
 const SITE = {
   title: "深水筆記 Deepwater",
@@ -36,6 +75,9 @@ export default function (eleventyConfig) {
           .replace(/[^\w\u4e00-\u9fa5]+/g, "-")
           .replace(/(^-|-$)/g, ""),
     });
+  const wikilinkMap = buildWikilinkMap();
+  const renderMd = md.render.bind(md);
+  md.render = (src, env) => renderMd(resolveWikilinks(src, wikilinkMap), env);
   eleventyConfig.setLibrary("md", md);
   eleventyConfig.addPlugin(syntaxHighlight);
 

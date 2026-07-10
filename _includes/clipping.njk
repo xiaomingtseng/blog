@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<div class="post-page">
+  <div class="post-topbar">
+    <a class="tt" href="/" style="font:500 12.5px var(--font-sans);color:var(--ink-soft)">← {{ SITE.title }}</a>
+    <span class="sep">/</span>
+    <span class="tt" style="color:var(--ink-faint)">網頁剪存</span>
+    <div class="post-topbar-ctrls">
+      <button class="btn-chip" data-theme-toggle aria-label="切換深色模式"><span data-theme-glyph>☾</span></button>
+    </div>
+  </div>
+
+  <article style="margin-top:24px">
+    <div class="post-type-label" style="color:var(--ink-faint)">CLIPPING</div>
+    <h1 class="post-title">{{ title }}</h1>
+    <div class="post-meta">
+      {% if source %}<a href="{{ source }}" target="_blank" rel="noopener">原始網頁 ↗</a>{% endif %}
+      {% if published %} · 發布於 {{ published | date("yyyy-MM-dd") }}{% endif %}
+      {% if created %} · 剪存於 {{ created | date("yyyy-MM-dd") }}{% endif %}
+    </div>
+    {% if tags and tags.length %}
+    <div class="post-tags">
+      {% for tag in tags %}<span style="font:500 11px var(--font-mono);color:var(--accent-ink);background:var(--accent-soft);border-radius:5px;padding:3px 7px">#{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="post-hr"></div>
+
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+  </article>
+</div>

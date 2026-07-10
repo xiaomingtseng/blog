@@ -51,8 +51,8 @@ img { max-width: 100%; }
 /* ============================================================
    側欄首頁版型（2a/2b：桌面側欄展開，手機收成頂部列）
    ============================================================ */
-.rh { container-type: inline-size; }
-.rh-grid { display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; }
+.rh { container-type: inline-size; display: flex; justify-content: center; }
+.rh-grid { display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; max-width: 1200px; width: 100%; }
 .rh-side {
   border-right: 1px solid var(--line);
   padding: 28px 22px;
