@@ -39,7 +39,8 @@ function resolveWikilinks(src, map) {
       return line.replace(/\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g, (m, target, alias) => {
         const url = map.get(target.trim());
         const label = (alias || target).trim();
-        return url ? `[${label}](${url})` : label;
+        // 檔名常含空白，markdown link 的目的地含空白時要包在 <...> 裡才合法
+        return url ? `[${label}](<${url}>)` : label;
       });
     })
     .join("\n");

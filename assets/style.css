@@ -166,7 +166,7 @@ img { max-width: 100%; }
 /* ============================================================
    單篇文章頁 / 文獻筆記頁
    ============================================================ */
-.post-page { max-width: 900px; margin: 0 auto; padding: 26px 24px 48px; }
+.post-page { max-width: 900px; margin: 0 auto; padding: 26px 24px 48px; container-type: inline-size; }
 .post-topbar { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); }
 .post-topbar .sep { color: var(--ink-faint); }
 .post-topbar .type-link { font: 500 12.5px var(--font-sans); text-decoration: none; }
@@ -182,6 +182,16 @@ img { max-width: 100%; }
 }
 .post-toc a.is-active { color: var(--accent); border-left-color: var(--accent); font-weight: 500; }
 .post-toc-hint { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font: 400 11px/1.6 var(--font-mono); color: var(--ink-faint); }
+
+/* .post-layout 的 186px TOC 欄是固定寬度，之前完全沒有響應式規則收合它——
+   螢幕越窄，扣掉這 186+36px 之後留給內文（含 .paper-links 按鈕）的可用寬度就越少，
+   越容易提早換行；手機寬度下甚至會被壓縮到只剩不到 150px。這裡用 .post-page 自己的
+   inline-size 當 container query 依據（比用外層 .rh 寬度更準，因為它已經扣掉側欄了），
+   窄於 640px 時直接收掉 TOC 欄，把整欄寬度還給內文。 */
+@container (max-width: 640px) {
+  .post-layout { grid-template-columns: 1fr; gap: 0; }
+  .post-toc { display: none; }
+}
 
 .post-type-label { font: 600 11.5px var(--font-mono); letter-spacing: .04em; }
 .post-title { font: 700 30px/1.3 var(--font-serif); color: var(--ink); margin: 10px 0 0; letter-spacing: -.01em; }
