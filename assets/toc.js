@@ -7,6 +7,8 @@
   if (!headings.length) {
     var wrap = nav.closest(".post-toc");
     if (wrap) wrap.style.display = "none";
+    var layout = wrap && wrap.closest(".post-layout");
+    if (layout) layout.classList.add("no-toc");
     return;
   }
 

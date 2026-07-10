@@ -52,7 +52,7 @@ img { max-width: 100%; }
    側欄首頁版型（2a/2b：桌面側欄展開，手機收成頂部列）
    ============================================================ */
 .rh { container-type: inline-size; display: flex; justify-content: center; }
-.rh-grid { display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; max-width: 1200px; width: 100%; }
+.rh-grid { display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; max-width: 1200px; width: 100%; position: relative; }
 .rh-side {
   border-right: 1px solid var(--line);
   padding: 28px 22px;
@@ -98,6 +98,27 @@ img { max-width: 100%; }
 .rh-ctrls { margin-top: auto; display: flex; gap: 8px; align-items: center; }
 .rh-hide-narrow { display: block; }
 
+/* 桌面版側欄收合鈕：釘在 .rh-grid（已置中的整體版面）邊界上，收合後隱藏 .rh-side，
+   跟寬螢幕的手機頂列版型無關，所以下面用 min-width 681px 的 @container 把效果限制在桌面寬度。 */
+.rh-collapse-btn {
+  position: absolute; top: 26px; left: 236px; transform: translateX(-50%); z-index: 30;
+  width: 22px; height: 22px; padding: 0; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft);
+  font: 500 12px/1 var(--font-mono); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.rh-collapse-btn:hover { color: var(--ink); border-color: var(--line-strong); }
+
+@container (min-width: 681px) {
+  /* 用單欄（1fr）取代原本的兩欄 0/1fr：如果保留兩欄，.rh-side 被 display:none 拿掉後
+     .rh-main 會變成 grid 裡唯一的 item，瀏覽器的 auto-placement 預設會把它塞進第一欄
+     （寬度 0 的那欄）而不是第二欄，內容就會被壓成 0 寬、右邊留白——跟先前 .post-toc
+     被隱藏時 <article> 掉進 186px 欄位是同一種 bug。改成單欄就沒有這個歧義。 */
+  html[data-sidebar="collapsed"] .rh-grid { grid-template-columns: 1fr; }
+  html[data-sidebar="collapsed"] .rh-side { display: none; }
+  html[data-sidebar="collapsed"] .rh-collapse-btn { left: 0; }
+}
+
 .rh-main { padding: 30px 28px; }
 .rh-intro { font: 400 12.5px/1.5 var(--font-sans); color: var(--ink-soft); margin-bottom: 16px; }
 .rh-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -122,6 +143,7 @@ img { max-width: 100%; }
   .rh-hide-narrow { display: none; }
   .rh-ctrls { margin-top: 0; }
   .rh-main { padding: 20px 18px; }
+  .rh-collapse-btn { display: none; }
 }
 
 /* small icon buttons (theme toggle / RSS / GitHub) */
@@ -173,6 +195,11 @@ img { max-width: 100%; }
 .post-topbar-ctrls { margin-left: auto; display: flex; gap: 6px; align-items: center; }
 
 .post-layout { display: grid; grid-template-columns: 186px 1fr; gap: 36px; margin-top: 24px; align-items: start; }
+/* toc.js 在沒有 h2 標題時用 display:none 隱藏 .post-toc，讓它整個退出 grid 排列流程，
+   剩下 article 一個 grid item 就會被自動放進原本屬於 .post-toc 的 186px 那欄，而不是
+   1fr 欄，導致內文被壓成 186px 寬。toc.js 同時會幫 .post-layout 加上 .no-toc，
+   讓 article 直接跨滿整個 grid，且跟螢幕寬度無關（本來就跟 640px 那個斷點是兩回事）。 */
+.post-layout.no-toc article { grid-column: 1 / -1; }
 .post-toc { position: sticky; top: 20px; align-self: start; font-family: var(--font-sans); }
 .post-toc-label { font: 600 10.5px var(--font-mono); color: var(--ink-faint); letter-spacing: .06em; margin-bottom: 12px; }
 .post-toc nav { display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--line); }
