@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/yolov8-augmentation.md",
+                "file": "Clippings/Predicting Student Health Risk.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "yolov8-augmentation"
+              "title": "Predicting Student Health Risk"
             }
           }
         ]
@@ -195,6 +195,8 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
+    "notes/research/yolov8-augmentation.md",
+    "Clippings/Predicting Student Health Risk.md",
     "_site/assets/vendor/katex.min.css",
     "_site/assets/vendor/fuse.min.mjs",
     "attachments/aug-compare.png.md",
@@ -210,14 +212,12 @@
     "assets/style.css.tmp.24416.21e323465c52",
     "_site/assets/sidebar.js",
     "assets/sidebar.js",
-    "assets/toc.js.tmp.24416.36a88f479970",
     "_site/attachments/aug-compare.png",
     "notes/literature/ViT 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
     "notes/literature/VGG 閱讀筆記.md",
     "notes/literature/ResNet 閱讀筆記.md",
-    "notes/research/yolov8-augmentation.md",
     "CLAUDE.md",
     "2026-07-07.md",
     "notes/literature/deepfish-2020.md",
