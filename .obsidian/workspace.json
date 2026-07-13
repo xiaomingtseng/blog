@@ -11,10 +11,14 @@
             "id": "ff3bf67e2e3dea00",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities"
             }
           }
         ]
@@ -190,12 +194,12 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
-    "notes/literature/未命名 1.md",
-    "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
     "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
+    "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "notes/literature/未命名 1.md",
     "notes/literature/未命名.md",
     "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/literature/ViT 閱讀筆記.md",
     "README.md",
     "notes/research/yolov8-augmentation.md",
