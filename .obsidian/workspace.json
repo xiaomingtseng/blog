@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/Predicting Student Health Risk.md",
+                "file": "Clippings/Biohub - Cell Tracking During Development 1.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Predicting Student Health Risk"
+              "title": "Biohub - Cell Tracking During Development 1"
             }
           }
         ]
@@ -195,8 +195,9 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
-    "notes/research/yolov8-augmentation.md",
     "Clippings/Predicting Student Health Risk.md",
+    "Clippings/Biohub - Cell Tracking During Development 1.md",
+    "notes/research/yolov8-augmentation.md",
     "_site/assets/vendor/katex.min.css",
     "_site/assets/vendor/fuse.min.mjs",
     "attachments/aug-compare.png.md",
