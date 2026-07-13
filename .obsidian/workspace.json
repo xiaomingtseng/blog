@@ -13,13 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/Biohub - Cell Tracking During Development 2.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": false
+                "file": "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
+                "mode": "preview",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Biohub - Cell Tracking During Development 2"
+              "title": "U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities"
             }
           }
         ]
@@ -195,12 +194,19 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
-    "Clippings/Biohub - Cell Tracking During Development 3.md",
-    "Clippings/Biohub - Cell Tracking During Development 2.md",
-    "Clippings/Predicting Student Health Risk.md",
-    "Clippings/Biohub - Cell Tracking During Development 1.md",
-    "Clippings/Biohub - Cell Tracking During Development.md",
+    "notes/literature/ViT 閱讀筆記.md",
+    "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
+    "README.md",
     "notes/research/yolov8-augmentation.md",
+    "Clippings/Biohub - Cell Tracking During Development 1.md",
+    "Clippings/Biohub - Cell Tracking During Development 3.md",
+    "notes/literature/VGG 閱讀筆記.md",
+    "notes/literature/ResNet 閱讀筆記.md",
+    "notes/literature/EfficientNet 閱讀筆記.md",
+    "notes/literature/AlexNet 閱讀筆記.md",
+    "Clippings/Predicting Student Health Risk.md",
+    "Clippings/Biohub - Cell Tracking During Development 2.md",
+    "Clippings/Biohub - Cell Tracking During Development.md",
     "_site/assets/vendor/katex.min.css",
     "_site/assets/vendor/fuse.min.mjs",
     "attachments/aug-compare.png.md",
@@ -216,11 +222,6 @@
     "_site/assets/sidebar.js",
     "assets/sidebar.js",
     "_site/attachments/aug-compare.png",
-    "notes/literature/ViT 閱讀筆記.md",
-    "notes/literature/EfficientNet 閱讀筆記.md",
-    "notes/literature/AlexNet 閱讀筆記.md",
-    "notes/literature/VGG 閱讀筆記.md",
-    "notes/literature/ResNet 閱讀筆記.md",
     "CLAUDE.md",
     "2026-07-07.md",
     "notes/literature/deepfish-2020.md",
