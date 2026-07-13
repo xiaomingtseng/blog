@@ -1,12 +1,15 @@
 ---
-title:   用 YOLOv8 做魚體偵測的資料增強策略
-type:    research           # research | literature | idea | life
-date:    2026-06-28
-updated: 2026-06-29         # 選填
-tags:    [CV, YOLO, 養殖]    # 自由多選
+title: 用 YOLOv8 做魚體偵測的資料增強策略
+type: research
+date: 2026-06-28
+updated: 2026-06-29
+tags:
+  - CV
+  - YOLO
+  - 養殖
 summary: 針對水下低對比影像，比較五種增強策略對 mAP@0.5 的實際影響。
-draft:   false
-math:    true               # 這篇有 LaTeX → 版面才載入 katex.css
+draft: true
+math: true
 ---
 
 ## 背景與問題

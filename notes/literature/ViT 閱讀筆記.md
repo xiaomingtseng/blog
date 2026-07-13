@@ -7,7 +7,7 @@ tags:
   - Transformer
   - image-classification
 summary: 把 Transformer 搬進影像分類,近幾年架構設計的分水嶺
-draft: false
+draft: true
 paper:
   title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
   authors:
