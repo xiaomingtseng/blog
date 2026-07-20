@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
+                "file": "Clippings/Biohub - Cell Tracking During Development 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nnU-Net a self-configuring method for deep learning-based biomedical image segmentation"
+              "title": "Biohub - Cell Tracking During Development 3"
             }
           }
         ]
@@ -194,24 +194,24 @@
   },
   "active": "ff3bf67e2e3dea00",
   "lastOpenFiles": [
+    "Clippings/Biohub - Cell Tracking During Development 2.md",
+    "Clippings/Biohub - Cell Tracking During Development 1.md",
+    "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "CLAUDE.md",
     "notes/research/yolov8-augmentation.md",
     "notes/literature/ViT 閱讀筆記.md",
-    "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
     "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
     "notes/literature/未命名 1.md",
     "notes/literature/未命名.md",
     "README.md",
-    "Clippings/Biohub - Cell Tracking During Development 1.md",
     "Clippings/Biohub - Cell Tracking During Development 3.md",
     "notes/literature/VGG 閱讀筆記.md",
     "notes/literature/ResNet 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
     "Clippings/Predicting Student Health Risk.md",
-    "Clippings/Biohub - Cell Tracking During Development 2.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "_site/assets/vendor/katex.min.css",
     "_site/assets/vendor/fuse.min.mjs",
