@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/Biohub - Cell Tracking During Development.md",
-                "mode": "preview",
+                "file": "notes/research/微調(fine-tuning) 是什麼.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Biohub - Cell Tracking During Development"
+              "title": "微調(fine-tuning) 是什麼"
             }
           }
         ],
@@ -209,8 +209,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0660b227451be15f",
+  "active": "f80216d4f77d4a38",
   "lastOpenFiles": [
+    "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
     "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
@@ -229,7 +230,6 @@
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
     "Clippings/Predicting Student Health Risk.md",
-    "Clippings/Biohub - Cell Tracking During Development.md",
     "_site/assets/vendor/katex.min.css",
     "_site/assets/vendor/fuse.min.mjs",
     "attachments/aug-compare.png.md",
