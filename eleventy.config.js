@@ -29,13 +29,31 @@ function buildWikilinkMap() {
   return map;
 }
 
-function resolveWikilinks(src, map) {
+// notes/attachments/ 底下的檔案（Obsidian 貼上圖片時會存在這裡）→ /attachments/ 網址對照表
+function buildAttachmentMap() {
+  const map = new Map();
+  const dir = "notes/attachments";
+  if (!fs.existsSync(dir)) return map;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isFile()) map.set(entry.name, `/attachments/${entry.name}`);
+  }
+  return map;
+}
+
+function resolveWikilinks(src, map, attachmentMap) {
   let inFence = false;
   return src
     .split("\n")
     .map((line) => {
       if (/^\s*```/.test(line)) inFence = !inFence;
       if (inFence) return line;
+      // Obsidian 圖片/附件嵌入：![[檔名]] / ![[檔名|別名]] → 標準 markdown 圖片語法
+      line = line.replace(/!\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g, (m, target, alias) => {
+        const name = target.trim();
+        const url = attachmentMap.get(name);
+        if (!url) return m; // 找不到對應檔案就保留原樣，方便發現遺漏
+        return `![${(alias || name).trim()}](<${url}>)`;
+      });
       return line.replace(/\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g, (m, target, alias) => {
         const url = map.get(target.trim());
         const label = (alias || target).trim();
@@ -77,8 +95,9 @@ export default function (eleventyConfig) {
           .replace(/(^-|-$)/g, ""),
     });
   const wikilinkMap = buildWikilinkMap();
+  const attachmentMap = buildAttachmentMap();
   const renderMd = md.render.bind(md);
-  md.render = (src, env) => renderMd(resolveWikilinks(src, wikilinkMap), env);
+  md.render = (src, env) => renderMd(resolveWikilinks(src, wikilinkMap, attachmentMap), env);
   eleventyConfig.setLibrary("md", md);
   eleventyConfig.addPlugin(syntaxHighlight);
 
