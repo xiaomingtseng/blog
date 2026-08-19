@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "微調(fine-tuning) 是什麼"
             }
+          },
+          {
+            "id": "d803cd1357b1ef74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/literature/1LoRA.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "1LoRA"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -209,16 +223,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f80216d4f77d4a38",
+  "active": "d803cd1357b1ef74",
   "lastOpenFiles": [
+    "2026-07-13.md",
+    "notes/literature/1LoRA.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "notes/research/微調(fine-tuning) 是什麼.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
     "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
     "notes/literature/ViT 閱讀筆記.md",
     "notes/research/yolov8-augmentation.md",
-    "notes/research/微調(fine-tuning) 是什麼.md",
     "Clippings/Biohub - Cell Tracking During Development 3.md",
     "Clippings/Biohub - Cell Tracking During Development 2.md",
     "Clippings/Biohub - Cell Tracking During Development 1.md",
@@ -245,7 +261,6 @@
     "_site/assets/sidebar.js",
     "assets/sidebar.js",
     "_site/attachments/aug-compare.png",
-    "2026-07-07.md",
-    "notes/literature/deepfish-2020.md"
+    "2026-07-07.md"
   ]
 }
