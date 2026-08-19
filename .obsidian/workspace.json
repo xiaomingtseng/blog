@@ -25,14 +25,12 @@
             "id": "d803cd1357b1ef74",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "notes/literature/1LoRA.md",
-                "mode": "source",
-                "source": false
+                "file": "notes/attachments/Pasted image 20260819145806.png"
               },
-              "icon": "lucide-file",
-              "title": "1LoRA"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260819145806"
             }
           }
         ],
@@ -211,9 +209,9 @@
   },
   "active": "d803cd1357b1ef74",
   "lastOpenFiles": [
+    "notes/literature/1LoRA.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/attachments/Pasted image 20260819145806.png",
-    "notes/literature/1LoRA.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
     "2026-07-13.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
