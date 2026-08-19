@@ -27,3 +27,5 @@ paper:
 - r = **rank**，這是唯一你可以自己設的超參數
 
 ![[Pasted image 20260819145806.png]]
+
+![[Pasted image 20260819225911.png]]
