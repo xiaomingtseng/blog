@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "notes/literature/1LoRA.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -211,10 +211,10 @@
   },
   "active": "d803cd1357b1ef74",
   "lastOpenFiles": [
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
-    "notes/literature/1LoRA.md",
-    "2026-07-13.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
+    "notes/literature/1LoRA.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "2026-07-13.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
     "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
