@@ -25,7 +25,6 @@ paper:
 
 
 
-![[Pasted image 20260819225911.png]]
 ### Introduction
 
 **背景**：PEFT 方法（LoRA、VeRA、MoRA 等）已經能大幅減少微調大模型時需要訓練的參數量，但作者想進一步逼問：如果把每層可訓練參數壓到跟 BitFit（只調 bias，業界公認最省參數的方法之一）一樣少，能不能還維持甚至超越 LoRA 的效果？這個「参数壓到最低」的情境，論文稱作 **very low-rank regime**。
