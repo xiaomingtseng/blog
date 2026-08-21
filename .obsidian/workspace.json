@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e1b04abb01f11534",
+        "id": "3b453a0b57911d50",
         "type": "tabs",
         "children": [
           {
-            "id": "f80216d4f77d4a38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/research/微調(fine-tuning) 是什麼.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "微調(fine-tuning) 是什麼"
-            }
-          },
-          {
-            "id": "d803cd1357b1ef74",
+            "id": "58ad0e14b3ea72a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,8 +21,7 @@
               "title": "1LoRA"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "389e2b9a5225aa4c",
@@ -210,11 +194,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d803cd1357b1ef74",
+  "active": "58ad0e14b3ea72a8",
   "lastOpenFiles": [
     "notes/attachments/Pasted image 20260820112909.png",
     "notes/attachments/Pasted image 20260819225911.png",
+    "notes/attachments/Pasted image 20260821100908.png",
+    "notes/literature/1LoRA.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "notes/research/微調(fine-tuning) 是什麼.md",
     "notes/attachments/Pasted image 20260819145806.png",
     "_site/attachments/Pasted image 20260819145806.png",
     "_site/Clippings/Predicting Student Health Risk/index.html",
@@ -227,8 +214,6 @@
     "_site/Clippings/Biohub - Cell Tracking During Development 1",
     "_site/notes/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation/index.html",
     "_site/notes/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation",
-    "notes/literature/1LoRA.md",
-    "notes/research/微調(fine-tuning) 是什麼.md",
     "2026-07-13.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
