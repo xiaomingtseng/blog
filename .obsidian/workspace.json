@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "1LoRA"
             }
+          },
+          {
+            "id": "dc5d15c480eb0132",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "發行記錄 1.13.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,7 +207,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "58ad0e14b3ea72a8",
+  "active": "dc5d15c480eb0132",
   "lastOpenFiles": [
     "notes/attachments/Pasted image 20260819145806.png",
     "notes/attachments/Pasted image 20260820112909.png",
