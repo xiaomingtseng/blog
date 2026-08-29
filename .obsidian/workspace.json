@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/1LoRA.md",
+                "file": "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1LoRA"
-            }
-          },
-          {
-            "id": "dc5d15c480eb0132",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "發行記錄 1.13.7"
+              "title": "3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,12 +194,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc5d15c480eb0132",
+  "active": "58ad0e14b3ea72a8",
   "lastOpenFiles": [
+    "notes/literature/CMA-ES.md",
+    "notes/literature/1LoRA.md",
     "notes/attachments/Pasted image 20260819145806.png",
     "notes/attachments/Pasted image 20260820112909.png",
     "notes/attachments/Pasted image 20260821100908.png",
-    "notes/literature/1LoRA.md",
     "notes/attachments/Pasted image 20260819225911.png",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
