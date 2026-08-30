@@ -1,3 +1,14 @@
+---
+title: kaggriculture
+type: idea
+date: 2026-08-30
+tags:
+  - Kaggle
+  - idea
+summary: 頭好痛
+draft: false
+---
+
 我需要一個乾淨的架構
 
 變數
