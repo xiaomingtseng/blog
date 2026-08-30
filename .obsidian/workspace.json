@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+                "file": "notes/idea/kaggriculture.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation"
+              "title": "kaggriculture"
             }
           }
         ]
@@ -198,11 +198,13 @@
   "lastOpenFiles": [
     "notes/literature/CMA-ES.md",
     "notes/literature/1LoRA.md",
+    "notes/idea/kaggriculture.md",
+    "notes/idea/碩零準備.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/attachments/Pasted image 20260819145806.png",
     "notes/attachments/Pasted image 20260820112909.png",
     "notes/attachments/Pasted image 20260821100908.png",
     "notes/attachments/Pasted image 20260819225911.png",
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
     "_site/attachments/Pasted image 20260819145806.png",
     "_site/Clippings/Predicting Student Health Risk/index.html",
@@ -235,8 +237,6 @@
     "Clippings/Predicting Student Health Risk.md",
     "attachments/aug-compare.png.md",
     "Clippings/(79) How to Speak.md",
-    "Clippings/【大神幫幫忙】肌肉記憶獲利法 feat.大俠武林 @dashawulin.md",
-    "notes/idea/碩零準備.md",
     "_site/attachments/aug-compare.png"
   ]
 }
