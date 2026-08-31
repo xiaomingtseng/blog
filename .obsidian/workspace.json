@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/1LoRA.md",
-                "mode": "preview",
+                "file": "notes/idea/碩零準備.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "1LoRA"
+              "title": "碩零準備"
             }
           }
         ]
@@ -196,11 +196,11 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
+    "notes/literature/1LoRA.md",
     "CLAUDE.md",
     "notes/idea/kaggriculture.md",
     "notes/idea/碩零準備.md",
     "notes/literature/CMA-ES.md",
-    "notes/literature/1LoRA.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/attachments/Pasted image 20260819145806.png",
     "notes/attachments/Pasted image 20260820112909.png",
