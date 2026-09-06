@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/idea/碩零準備.md",
-                "mode": "source",
+                "file": "notes/research/LoRA演進.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "碩零準備"
+              "title": "LoRA演進"
             }
           }
         ]
@@ -196,17 +196,18 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
+    "notes/research/微調(fine-tuning) 是什麼.md",
+    "notes/research/LoRA演進.md",
     "notes/literature/1LoRA.md",
+    "notes/idea/碩零準備.md",
     "CLAUDE.md",
     "notes/idea/kaggriculture.md",
-    "notes/idea/碩零準備.md",
     "notes/literature/CMA-ES.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/attachments/Pasted image 20260819145806.png",
     "notes/attachments/Pasted image 20260820112909.png",
     "notes/attachments/Pasted image 20260821100908.png",
     "notes/attachments/Pasted image 20260819225911.png",
-    "notes/research/微調(fine-tuning) 是什麼.md",
     "_site/attachments/Pasted image 20260819145806.png",
     "_site/Clippings/Predicting Student Health Risk/index.html",
     "_site/Clippings/Predicting Student Health Risk",
@@ -236,7 +237,6 @@
     "notes/literature/AlexNet 閱讀筆記.md",
     "Clippings/Predicting Student Health Risk.md",
     "attachments/aug-compare.png.md",
-    "Clippings/(79) How to Speak.md",
     "_site/attachments/aug-compare.png"
   ]
 }
