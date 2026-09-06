@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "notes/research/LoRA演進.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -196,10 +196,10 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
-    "notes/research/微調(fine-tuning) 是什麼.md",
-    "notes/research/LoRA演進.md",
-    "notes/literature/1LoRA.md",
     "notes/idea/碩零準備.md",
+    "notes/research/LoRA演進.md",
+    "notes/research/微調(fine-tuning) 是什麼.md",
+    "notes/literature/1LoRA.md",
     "CLAUDE.md",
     "notes/idea/kaggriculture.md",
     "notes/literature/CMA-ES.md",
