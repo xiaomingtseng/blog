@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/LoRA演進.md",
+                "file": "notes/research/微調(fine-tuning) 是什麼.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "LoRA演進"
+              "title": "微調(fine-tuning) 是什麼"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "389e2b9a5225aa4c",
@@ -198,35 +197,36 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
+    "_site/attachments/Pasted image 20260907213133.png",
+    "_site/attachments/pca_cosine_similarity_concept.png",
+    "_site/attachments/Pasted image 20260907211601.png",
+    "_site/attachments/Pasted image 20260907211043.png",
+    "_site/attachments/Pasted image 20260907210954.png",
+    "_site/attachments/Pasted image 20260821100908.png",
+    "_site/attachments/Pasted image 20260820112909.png",
+    "_site/notes/CMA-ES/index.html",
+    "_site/notes/CMA-ES",
+    "_site/notes/LoRA演進/index.html",
+    "_site/notes/LoRA演進",
+    "_site/notes/kaggriculture/index.html",
+    "_site/notes/kaggriculture",
+    "notes/literature/1LoRA.md",
+    "notes/literature/CMA-ES.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "notes/idea/kaggriculture.md",
+    "notes/idea/碩零準備.md",
+    "notes/research/LoRA演進.md",
     "notes/attachments/pca_cosine_similarity_concept.png",
     "notes/attachments/Pasted image 20260907213133.png",
     "notes/attachments/Pasted image 20260907211601.png",
     "README.md",
     "CLAUDE.md",
-    "notes/research/LoRA演進.md",
     "notes/attachments/Pasted image 20260907211043.png",
-    "notes/attachments/Pasted image 20260907210954.png",
-    "notes/idea/碩零準備.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
-    "notes/literature/1LoRA.md",
-    "notes/idea/kaggriculture.md",
-    "notes/literature/CMA-ES.md",
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
-    "notes/attachments/Pasted image 20260819145806.png",
-    "notes/attachments/Pasted image 20260820112909.png",
-    "notes/attachments/Pasted image 20260821100908.png",
-    "notes/attachments/Pasted image 20260819225911.png",
-    "_site/attachments/Pasted image 20260819145806.png",
     "_site/Clippings/Predicting Student Health Risk/index.html",
     "_site/Clippings/Predicting Student Health Risk",
     "_site/Clippings/Biohub - Cell Tracking During Development 3/index.html",
     "_site/Clippings/Biohub - Cell Tracking During Development 3",
-    "_site/Clippings/Biohub - Cell Tracking During Development 2/index.html",
-    "_site/Clippings/Biohub - Cell Tracking During Development 2",
-    "_site/Clippings/Biohub - Cell Tracking During Development 1/index.html",
-    "_site/Clippings/Biohub - Cell Tracking During Development 1",
-    "_site/notes/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation/index.html",
-    "_site/notes/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation",
     "2026-07-13.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
@@ -242,7 +242,6 @@
     "notes/literature/ResNet 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
-    "Clippings/Predicting Student Health Risk.md",
-    "_site/attachments/aug-compare.png"
+    "Clippings/Predicting Student Health Risk.md"
   ]
 }
