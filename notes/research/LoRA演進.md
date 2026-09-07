@@ -19,12 +19,48 @@ LoRA好，多好(數據)
 
 它把 LoRA 的想法推到極致：既然 rank=1 就夠用，那乾脆把 A 矩陣固定成「全部特徵加總」（不用學），只學一個向量 bb b 做解壓縮：  
 
-ΔW=b1T\Delta W = b\mathbf{1}^T
 2025 1LoRA誕生又是基於何種理由
 方法又是?(趨近bitfit)
 跟其他變體比各自的優勢又在哪
 
-多好(數據)
+
+
+
+### LoRA：刻意只挑 attention 層
+
+原始 LoRA 論文在 4.2 節講得很明白，他們**只**把 LoRA 用在 self-attention 裡的 Wq,Wk,Wv,WoW_q, W_k, W_v, W_o Wq​,Wk​,Wv​,Wo​，MLP 層完全凍結不動。原因是「simplicity and parameter-efficiency」——選擇性地限制在特定矩陣，減少計算量與參數。
+
+論文甚至做了實驗（Table 5）去比較「該把有限的參數預算放在 WqW_q Wq​ 還是 WvW_v Wv​ 還是全部」，結論是同時用在 Wq,WvW_q, W_v Wq​,Wv​ 效果最好。但**MLP 層從頭到尾沒被碰過**。
+
+### 1LoRA：反而是刻意「不挑」，全部線性層都用
+
+1LoRA 附錄 A 講得很直接：
+![[Pasted image 20260907211601.png]]
+
+這是它的核心賣點之一，摘要裡就寫了：
+
+> "1LoRA allows to fine-tune more evenly across layers, **instead of focusing on specific ones (e.g. attention layers)**, improving performance further."
+
+為什麼可以這樣做？因為 1LoRA 每層只需要 dd d 個參數（比 LoRA 的 k+dk+d k+d 少很多），記憶體開銷極小，所以就算全部線性層（包含 attention 的 QKV/output，以及 MLP 的兩層）都加上 1LoRA，總記憶體用量還是可控。
+
+### 有具體證據支持嗎？
+
+有，論文用 LLaMA-2 13B 的實驗（Figure 4）直接證明這個差異的重要性：
+![[Pasted image 20260907211043.png]]
+- LoRA 因為記憶體不夠，被迫**只能**限制在 Q, K, V 三種矩陣（論文標成 "LoRA (QKV)"）
+- 1LoRA 用差不多的記憶體預算，可以**同時涵蓋所有線性層**（包含 MLP）
+- 結果 1LoRA 效能勝過受限的 LoRA (QKV)
+
+### PCA 分析：不同層其實貢獻不一樣（5.2 節）
+
+論文還做了一個有趣的分析：把「加總壓縮」跟真正最優的更新方向（PCA 主成分）做相似度比較，發現：
+
+- 大部分層（QKV、投影層等）相似度都偏低
+- 但 **ViT 的第二個 MLP 層**（也就是 GELU 激活函數之後的那層）相似度明顯較高
+
+原因是 GELU/ReLU 這類非線性函數會把特徵推向「正象限」，這正好讓「全部特徵相加」這個固定方向（也就是向量 1\mathbf{1} 1）跟真正需要學的更新方向比較接近，不容易正交、也就不太會把有用訊號抵銷掉。
+
+**簡單講**：LoRA 是「有意識地選 attention 層」；1LoRA 是「因為夠省，乾脆全鋪」，而且鋪在 MLP 層（尤其是 GELU 後面那層）反而還特別有效，這也是它能超越 LoRA 的原因之一。
 
 還有可能有延伸嗎
 上述問題有特別的經驗能學習嗎

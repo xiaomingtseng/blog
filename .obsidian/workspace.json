@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "notes/research/LoRA演進.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -198,11 +198,15 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
-    "notes/idea/碩零準備.md",
+    "notes/attachments/Pasted image 20260907211601.png",
+    "README.md",
+    "CLAUDE.md",
     "notes/research/LoRA演進.md",
+    "notes/attachments/Pasted image 20260907211043.png",
+    "notes/attachments/Pasted image 20260907210954.png",
+    "notes/idea/碩零準備.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
     "notes/literature/1LoRA.md",
-    "CLAUDE.md",
     "notes/idea/kaggriculture.md",
     "notes/literature/CMA-ES.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
@@ -232,13 +236,11 @@
     "Clippings/Biohub - Cell Tracking During Development 2.md",
     "Clippings/Biohub - Cell Tracking During Development 1.md",
     "notes/literature/未命名 1.md",
-    "README.md",
     "notes/literature/VGG 閱讀筆記.md",
     "notes/literature/ResNet 閱讀筆記.md",
     "notes/literature/EfficientNet 閱讀筆記.md",
     "notes/literature/AlexNet 閱讀筆記.md",
     "Clippings/Predicting Student Health Risk.md",
-    "attachments/aug-compare.png.md",
     "_site/attachments/aug-compare.png"
   ]
 }
