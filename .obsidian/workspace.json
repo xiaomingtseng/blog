@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/微調(fine-tuning) 是什麼.md",
+                "file": "notes/research/LoRA演進.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "微調(fine-tuning) 是什麼"
+              "title": "LoRA演進"
             }
           }
         ]
@@ -197,6 +197,8 @@
   },
   "active": "1e456c109e596da4",
   "lastOpenFiles": [
+    "notes/attachments/Pasted image 20260908102323.png",
+    "notes/research/微調(fine-tuning) 是什麼.md",
     "_site/attachments/Pasted image 20260907213133.png",
     "_site/attachments/pca_cosine_similarity_concept.png",
     "_site/attachments/Pasted image 20260907211601.png",
@@ -221,8 +223,6 @@
     "notes/attachments/Pasted image 20260907211601.png",
     "README.md",
     "CLAUDE.md",
-    "notes/attachments/Pasted image 20260907211043.png",
-    "notes/research/微調(fine-tuning) 是什麼.md",
     "_site/Clippings/Predicting Student Health Risk/index.html",
     "_site/Clippings/Predicting Student Health Risk",
     "_site/Clippings/Biohub - Cell Tracking During Development 3/index.html",

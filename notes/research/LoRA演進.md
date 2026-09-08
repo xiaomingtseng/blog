@@ -25,22 +25,14 @@ Microsoft團隊基於上述理由建立了LoRA，概念如下:
 2. 並聯小矩陣: 在原模型的旁邊，塞入兩個極小的低秩矩陣（稱為 A 和 B）來捕捉變化量。
 3. 矩陣分解: 原本一個 d\*d 的超大更新矩陣，被拆解成 d\*r 和 r\*d的兩個小矩陣（其中 r 通常設得非常小，d >> r）。
 
-LoRA好，多好(數據)
-
-它把 LoRA 的想法推到極致：既然 rank=1 就夠用，那乾脆把 A 矩陣固定成「全部特徵加總」（不用學），只學一個向量 bb b 做解壓縮：  
-
-2025 1LoRA誕生又是基於何種理由
-方法又是?(趨近bitfit)
-跟其他變體比各自的優勢又在哪
-
-
+![[Pasted image 20260908102323.png]]
 
 
 ### LoRA：刻意只挑 attention 層
 
-原始 LoRA 論文在 4.2 節講得很明白，他們**只**把 LoRA 用在 self-attention 裡的 Wq,Wk,Wv,WoW_q, W_k, W_v, W_o Wq​,Wk​,Wv​,Wo​，MLP 層完全凍結不動。原因是「simplicity and parameter-efficiency」——選擇性地限制在特定矩陣，減少計算量與參數。
+原始 LoRA 論文在 4.2 節講得很明白，他們**只**把 LoRA 用在 self-attention 裡的 Wq,Wk,Wv,Wo​，MLP 層完全凍結不動。原因是「simplicity and parameter-efficiency」——選擇性地限制在特定矩陣，減少計算量與參數。
 
-論文甚至做了實驗（Table 5）去比較「該把有限的參數預算放在 WqW_q Wq​ 還是 WvW_v Wv​ 還是全部」，結論是同時用在 Wq,WvW_q, W_v Wq​,Wv​ 效果最好。但**MLP 層從頭到尾沒被碰過**。
+論文甚至做了實驗（Table 5）去比較「該把有限的參數預算放在 Wq​ 還是 Wv還是全部」，結論是同時用在 Wq,Wv 效果最好。但**MLP 層從頭到尾沒被碰過**。
 
 ### 1LoRA：反而是刻意「不挑」，全部線性層都用
 
@@ -51,7 +43,7 @@ LoRA好，多好(數據)
 
 > "1LoRA allows to fine-tune more evenly across layers, **instead of focusing on specific ones (e.g. attention layers)**, improving performance further."
 
-為什麼可以這樣做？因為 1LoRA 每層只需要 dd d 個參數（比 LoRA 的 k+dk+d k+d 少很多），記憶體開銷極小，所以就算全部線性層（包含 attention 的 QKV/output，以及 MLP 的兩層）都加上 1LoRA，總記憶體用量還是可控。
+為什麼可以這樣做？因為 1LoRA 每層只需要  d 個參數（比 LoRA 的 k+d 少很多），記憶體開銷極小，所以就算全部線性層（包含 attention 的 QKV/output，以及 MLP 的兩層）都加上 1LoRA，總記憶體用量還是可控。
 
 ### 有具體證據支持嗎？
 
