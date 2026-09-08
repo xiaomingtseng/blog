@@ -59,7 +59,7 @@ Microsoft團隊基於上述理由建立了LoRA，概念如下:
 
 現在有三種「壓縮方向」候選人，都是拿去跟這些 PC 方向比對：
 
-1. **Summation（1LoRA 用的）**：固定用「全部加總」的方向，也就是向量 1\mathbf{1} 1
+1. **Summation（1LoRA 用的）**：固定用「全部加總」的方向，也就是向量 1
 2. **Random**：隨機選一個方向
 3. **Learned（LoRA, r=1 學出來的）**：讓模型自己去學一個最好的方向
 
@@ -113,8 +113,8 @@ Microsoft團隊基於上述理由建立了LoRA，概念如下:
 
 原始 LoRA 論文的 Figure 2 明確指出：
 
-- prefix-embedding tuning 超過 256 個特殊 token 之後效能明顯下滑
-- prefix-layer tuning 超過 32 個 token 也一樣
+- prefix-embedding tuning 超過 10^6 個特殊 token 之後效能明顯下滑
+- prefix-layer tuning 超過 10^7 個 token 也一樣
 
 作者猜測是「特殊 token 太多，讓輸入分佈偏離預訓練資料分佈太遠」。
 
