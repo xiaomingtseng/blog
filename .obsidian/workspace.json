@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/學長碩論.md",
+                "file": "notes/life/下周進度.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "學長碩論"
+              "title": "下周進度"
             }
           }
         ],
@@ -95,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "389e2b9a5225aa4c",
@@ -112,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/research/學長碩論.md",
+                "file": "notes/life/下周進度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,9 +225,10 @@
   "active": "8209a58bfc7cb63b",
   "lastOpenFiles": [
     "notes/idea/碩零準備.md",
+    "notes/life/下周進度.md",
+    "README.md",
     "notes/research/學長碩論.md",
     "2026-06-28.md",
-    "README.md",
     "CLAUDE.md",
     "notes/research/計算機攝影學 (Computational Photography).md",
     "notes/literature/CMA-ES.md",
@@ -270,7 +270,6 @@
     "Clippings/Biohub - Cell Tracking During Development 1.md",
     "notes/literature/未命名 1.md",
     "notes/literature/VGG 閱讀筆記.md",
-    "notes/literature/ResNet 閱讀筆記.md",
-    "notes/literature/EfficientNet 閱讀筆記.md"
+    "notes/literature/ResNet 閱讀筆記.md"
   ]
 }
