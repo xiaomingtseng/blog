@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/research/LoRA演進.md",
+                "file": "notes/research/學長碩論.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "LoRA演進"
+              "title": "學長碩論"
             }
           }
         ],
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/research/LoRA演進.md",
+                "file": "notes/research/學長碩論.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -224,6 +224,7 @@
   },
   "active": "8209a58bfc7cb63b",
   "lastOpenFiles": [
+    "notes/research/LoRA演進.md",
     "notes/research/計算機攝影學 (Computational Photography).md",
     "notes/research/微調(fine-tuning) 是什麼.md",
     "notes/literature/1LoRA.md",
@@ -234,7 +235,6 @@
     "2026-06-28.md",
     "CLAUDE.md",
     "notes/literature/CMA-ES.md",
-    "notes/research/LoRA演進.md",
     "notes/attachments/Pasted image 20260908161757.png",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "未命名.canvas",
