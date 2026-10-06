@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5ad49f110242343e",
+        "id": "94d60ad06e1f136d",
         "type": "tabs",
         "children": [
           {
-            "id": "1e456c109e596da4",
+            "id": "3cf771e3fa96487c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/CMA-ES.md",
-                "mode": "preview",
+                "file": "notes/idea/碩零準備.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "CMA-ES"
-            }
-          },
-          {
-            "id": "8209a58bfc7cb63b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/research/學長碩論.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "學長碩論"
+              "title": "碩零準備"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 256.4738655090332
   },
   "right": {
     "id": "389e2b9a5225aa4c",
@@ -188,8 +172,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -223,19 +207,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8209a58bfc7cb63b",
+  "active": "3cf771e3fa96487c",
   "lastOpenFiles": [
+    "notes/idea/kaggriculture.md",
+    "notes/idea/碩零準備.md",
+    "notes/life/北海道大學入學申請.md",
+    "notes/literature/CNN-based Density Estimation and CrowdCounting  A Survey.md",
+    "2026-09-19.md",
+    "notes/literature/CMA-ES.md",
+    "notes/literature/Cross-scene Crowd Counting via Deep Convolutional Neural Networks.md",
+    "notes/literature/1LoRA.md",
+    "notes/research/學長碩論.md",
     "notes/research/LoRA演進.md",
     "notes/research/計算機攝影學 (Computational Photography).md",
     "notes/research/微調(fine-tuning) 是什麼.md",
-    "notes/literature/1LoRA.md",
-    "notes/life/下周進度.md",
-    "notes/idea/碩零準備.md",
     "README.md",
-    "notes/research/學長碩論.md",
     "2026-06-28.md",
     "CLAUDE.md",
-    "notes/literature/CMA-ES.md",
     "notes/attachments/Pasted image 20260908161757.png",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "未命名.canvas",
@@ -254,7 +242,6 @@
     "_site/notes/LoRA演進",
     "_site/notes/kaggriculture/index.html",
     "_site/notes/kaggriculture",
-    "notes/idea/kaggriculture.md",
     "_site/Clippings/Predicting Student Health Risk/index.html",
     "_site/Clippings/Predicting Student Health Risk",
     "_site/Clippings/Biohub - Cell Tracking During Development 3/index.html",
@@ -268,9 +255,6 @@
     "notes/research/yolov8-augmentation.md",
     "Clippings/Biohub - Cell Tracking During Development 3.md",
     "Clippings/Biohub - Cell Tracking During Development 2.md",
-    "Clippings/Biohub - Cell Tracking During Development 1.md",
-    "notes/literature/未命名 1.md",
-    "notes/literature/VGG 閱讀筆記.md",
-    "notes/literature/ResNet 閱讀筆記.md"
+    "Clippings/Biohub - Cell Tracking During Development 1.md"
   ]
 }
