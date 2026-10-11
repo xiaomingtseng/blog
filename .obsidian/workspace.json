@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/idea/碩零準備.md",
+                "file": "notes/idea/本周報告事項.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "碩零準備"
+              "title": "本周報告事項"
             }
           }
         ]
@@ -209,8 +209,9 @@
   },
   "active": "3cf771e3fa96487c",
   "lastOpenFiles": [
-    "notes/idea/kaggriculture.md",
     "notes/idea/碩零準備.md",
+    "notes/idea/本周報告事項.md",
+    "notes/idea/kaggriculture.md",
     "notes/life/北海道大學入學申請.md",
     "notes/literature/CNN-based Density Estimation and CrowdCounting  A Survey.md",
     "2026-09-19.md",
@@ -254,7 +255,6 @@
     "notes/literature/ViT 閱讀筆記.md",
     "notes/research/yolov8-augmentation.md",
     "Clippings/Biohub - Cell Tracking During Development 3.md",
-    "Clippings/Biohub - Cell Tracking During Development 2.md",
-    "Clippings/Biohub - Cell Tracking During Development 1.md"
+    "Clippings/Biohub - Cell Tracking During Development 2.md"
   ]
 }
