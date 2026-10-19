@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/literature/KDMG 論文導讀：可學習的密度圖生成.md",
-                "mode": "preview",
+                "file": "notes/research/純紀錄.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "KDMG 論文導讀：可學習的密度圖生成"
+              "title": "純紀錄"
             }
           }
         ]
@@ -209,8 +209,9 @@
   },
   "active": "3cf771e3fa96487c",
   "lastOpenFiles": [
-    "notes/literature/1LoRA.md",
     "notes/literature/KDMG 論文導讀：可學習的密度圖生成.md",
+    "notes/research/純紀錄.md",
+    "notes/literature/1LoRA.md",
     "notes/life/北海道大學入學申請.md",
     "notes/idea/本周報告事項.md",
     "notes/idea/碩零準備.md",
@@ -254,7 +255,6 @@
     "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
     "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
     "notes/literature/ViT 閱讀筆記.md",
-    "notes/research/yolov8-augmentation.md",
-    "Clippings/Biohub - Cell Tracking During Development 3.md"
+    "notes/research/yolov8-augmentation.md"
   ]
 }
