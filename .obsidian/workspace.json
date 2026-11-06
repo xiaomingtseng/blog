@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "文學計畫.md",
+                "file": "notes/life/北海道大學入學申請.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "文學計畫"
+              "title": "北海道大學入學申請"
             }
           }
         ],
@@ -222,28 +222,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "157bf0a83275b3ce",
+  "active": "0660b227451be15f",
   "lastOpenFiles": [
-    "notes/research/LoRA演進.md",
-    "文學計畫.md",
-    "notes/research/學長碩論.md",
     "notes/research/微調(fine-tuning) 是什麼.md",
-    "notes/research/純紀錄.md",
-    "notes/literature/CNN-based Density Estimation and CrowdCounting  A Survey.md",
-    "notes/literature/CMA-ES.md",
-    "notes/literature/KDMG 論文導讀：可學習的密度圖生成.md",
-    "notes/literature/1LoRA.md",
+    "notes/research/NOV.  第一周進展.md",
+    "notes/attachments/Pasted image 20261106235509.png",
     "notes/idea/碩零準備.md",
     "notes/idea/kaggriculture.md",
-    "notes/idea/本周報告事項.md",
-    "notes/research/計算機攝影學 (Computational Photography).md",
-    "notes/literature/Cross-scene Crowd Counting via Deep Convolutional Neural Networks.md",
-    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "notes/life/北海道大學入學申請.md",
-    "2026-09-19.md",
+    "notes/literature/CNN-based Density Estimation and CrowdCounting  A Survey.md",
+    "notes/literature/Cross-scene Crowd Counting via Deep Convolutional Neural Networks.md",
+    "notes/research/純紀錄.md",
+    "notes/research/學長碩論.md",
+    "notes/research/計算機攝影學 (Computational Photography).md",
     "README.md",
-    "2026-06-28.md",
     "CLAUDE.md",
+    "文學計畫.md",
+    "notes/literature/KDMG 論文導讀：可學習的密度圖生成.md",
+    "notes/idea/本周報告事項.md",
+    "notes/research/LoRA演進.md",
+    "notes/literature/CMA-ES.md",
+    "notes/literature/1LoRA.md",
+    "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
+    "2026-09-19.md",
+    "2026-06-28.md",
     "notes/attachments/Pasted image 20260908161757.png",
     "未命名.canvas",
     "notes/attachments/Pasted image 20260908115906.png",
@@ -254,7 +256,6 @@
     "_site/attachments/Pasted image 20260907211601.png",
     "_site/attachments/Pasted image 20260907211043.png",
     "_site/attachments/Pasted image 20260907210954.png",
-    "_site/attachments/Pasted image 20260821100908.png",
     "_site/notes/CMA-ES/index.html",
     "_site/notes/CMA-ES",
     "_site/notes/LoRA演進/index.html",
@@ -268,8 +269,6 @@
     "2026-07-13.md",
     "Clippings/Biohub - Cell Tracking During Development.md",
     "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
-    "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md",
-    "notes/literature/U-Net in Medical Image Segmentation A Review of Its Applications Across Modalities.md",
-    "notes/literature/ViT 閱讀筆記.md"
+    "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md"
   ]
 }
