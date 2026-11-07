@@ -9,20 +9,7 @@ tags:
 summary: 聚焦 CNN + 密度圖路線的人群計數 survey，說明哪些方法有效、為什麼有效
 draft: true
 math: true
-paper:
-  title: "CNN-based Density Estimation and Crowd Counting: A Survey"
-  authors:
-    - Guangshuai Gao
-    - Junyu Gao
-    - Qingjie Liu
-    - Qi Wang
-    - Yunhong Wang
-  year: 2020
-  venue: arXiv preprint (cs.CV), arXiv:2003.12783v1
-  doi: 10.48550/arXiv.2003.12783
-  link: https://arxiv.org/abs/2003.12783
-  pdf: https://arxiv.org/pdf/2003.12783
-  tldr: 系統性回顧 CNN 密度圖式人群計數，依網路架構、學習範式、監督形式等分類，並整理資料集、指標與效能比較。
+link: https://arxiv.org/abs/2003.12783
 ---
 ### 核心內容
 

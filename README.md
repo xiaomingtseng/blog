@@ -18,7 +18,7 @@ your-repo/
 │   │   └─ inbox.11tydata.js      # draft: true + permalink: false
 │   ├─ research/*.md              # 研究：概念整理（tag 概念）、週報/會議（tag 週報）
 │   ├─ literature/*.md
-│   │   └─ literature.11tydata.js # 覆寫 layout=paper.njk（文獻筆記論文卡）
+│   │   └─ literature.11tydata.js # 覆寫 layout=paper.njk（標題下多一顆「論文 ↗」按鈕）
 │   ├─ essay/*.md                 # 隨筆：想法、心情、生活
 │   └─ attachments/               # Obsidian 圖片附件 → 會複製到 /attachments
 ├─ _templates/                    # Obsidian 範本（note.md / literature.md），已被 .eleventyignore 排除
@@ -27,7 +27,7 @@ your-repo/
 │   ├─ home.njk    # 首頁：三類型卡片
 │   ├─ list.njk    # /notes/ 全部筆記，類型 + 標籤過濾（前端 JS，網址可分享）
 │   ├─ post.njk    # 單篇文章：左側 sticky 目錄、footnote、上下篇、相關文章
-│   └─ paper.njk   # 文獻筆記：頂部論文卡（標題/作者/年份/TL;DR/連結）
+│   └─ paper.njk   # 文獻筆記：同 post.njk，frontmatter 有 link 就顯示「論文 ↗」按鈕
 ├─ assets/
 │   ├─ style.css       # 全部 design tokens + 版面樣式
 │   ├─ theme.js        # 深色模式（記住上次選擇）
@@ -42,13 +42,16 @@ your-repo/
 ## 寫筆記的流程：先記下來，之後再整理
 
 1. **記**：在 Obsidian 按「新筆記」，檔案會自動建在 `notes/inbox/`（`.obsidian/app.json` 設定）。什麼都不用寫，收件匣的筆記不會發布。
-2. **整理**（例如每週一次）：把筆記搬到 `research/`、`literature/` 或 `essay/`，按 **Alt+T** 插入範本（`_templates/note.md` 或 `literature.md`），title 和 date 會自動填好。補上 tags 和 summary，然後把 `draft` 改成 `false`。
+2. **整理**（例如每週一次）：把筆記搬到 `research/`、`literature/` 或 `essay/`，搬出收件匣就會發布。想補 tags 或 summary 的話，按 **Alt+T** 插入範本（`_templates/note.md` 或 `literature.md`）；不想補也可以不插。
 3. **push**：網站就會更新。
 
-frontmatter 沒寫的欄位，build 時會自動補上（見 `notes/notes.11tydata.js`）：
+**frontmatter 的每個欄位都是選填的**，整段不寫也可以。沒寫的欄位，build 時會自動處理（見 `notes/notes.11tydata.js`）：
 - `type`：用所在的資料夾名稱。
 - `title`：用檔名。
 - `date`：用第一次 commit 進 git 的日期。
+- `math`：內文有 LaTeX 公式就自動載入 KaTeX 樣式。
+- `draft`：預設 `false`。收件匣裡的筆記一律當草稿；想先藏起來，手動寫 `draft: true`。
+- `tags`、`summary`、`updated`、`link`：不寫就不顯示。
 
 所以範本裡不放 `type`，之後搬資料夾也不用再改 frontmatter。
 
@@ -56,7 +59,7 @@ frontmatter 沒寫的欄位，build 時會自動補上（見 `notes/notes.11tyda
 
 ## 每篇筆記的 frontmatter schema
 
-**一般筆記**（research / essay，用 `post.njk`）：
+**一般筆記**（research / essay，用 `post.njk`）。以下欄位全部選填，列出來只是說明有哪些可以用：
 
 ```yaml
 ---
@@ -67,29 +70,20 @@ updated: 2026-06-29         # 選填
 tags:    [CV, YOLO, 養殖]
 summary: 一句話摘要（列表頁、首頁卡片、搜尋、RSS 都會用到）
 draft:   false
-math:    true               # 這篇有 LaTeX 才需要，會多載入 katex.css
+math:    true               # 不用寫：內文有公式會自動偵測
 ---
 ```
 
-**文獻筆記**（literature，用 `paper.njk`，多一個 `paper` 區塊）：
+**文獻筆記**（literature，用 `paper.njk`）：只要比一般筆記多填一個 `link`（論文網址，選填），標題下會出現「論文 ↗」按鈕：
 
 ```yaml
 ---
 title:   標題
-type:    literature
 date:    2026-06-28
 tags:    [文獻, dataset, CV]
 summary: 一句話摘要
+link:    https://arxiv.org/abs/xxxx.xxxxx
 draft:   false
-paper:
-  title:   論文完整標題
-  authors: [作者一, 作者二]
-  year:    2020
-  venue:   期刊/會議名稱
-  doi:     10.xxxx/xxxxx     # 選填，會產生 DOI 連結
-  link:    https://...       # 選填，「論文 ↗」按鈕
-  pdf:     https://...       # 選填，「PDF」按鈕
-  tldr:    一句話重點，會顯示在頂部論文卡
 ---
 ```
 

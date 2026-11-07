@@ -274,20 +274,7 @@ img { max-width: 100%; }
 .prereq-yes { color: var(--c-lit); font-weight: 600; }
 .prereq-no { color: var(--ink-faint); }
 
-/* 文獻筆記：論文卡 */
-.paper-card {
-  margin-top: 12px; background: var(--surface); border: 1px solid var(--line);
-  border-left: 3px solid var(--c-lit); border-radius: 12px; padding: 20px 22px;
-}
-.paper-eyebrow { font: 600 10px var(--font-mono); color: var(--c-lit); letter-spacing: .08em; }
-.paper-title { margin-top: 8px; font: 600 20px/1.4 var(--font-serif); color: var(--ink); }
-.paper-authors { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 14px; font: 400 13px var(--font-sans); color: var(--ink-soft); }
-.paper-authors .sep { color: var(--ink-faint); }
-.paper-authors .venue { font-style: italic; }
-.paper-tldr { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; }
-.paper-tldr .lbl { font: 600 11px var(--font-mono); color: var(--c-lit); flex: none; padding-top: 2px; }
-.paper-tldr .txt { font: 500 15px/1.6 var(--font-serif); color: var(--ink); }
+/* 文獻筆記：標題下的「論文 ↗」連結按鈕 */
 .paper-links { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
 .paper-links a { font: 500 12px var(--font-mono); border-radius: 7px; padding: 6px 12px; text-decoration: none; }
 .paper-links a.primary { color: #fff; background: var(--c-lit); }
-.paper-links a.secondary { color: var(--ink); background: var(--surface); border: 1px solid var(--line); }

@@ -9,19 +9,7 @@ tags:
 summary: 用密度圖取代單純的計數，密度圖保留疏密分佈，所以連局部計數也做得到
 draft: false
 math: true
-paper:
-  title: "Cross-scene Crowd Counting via Deep Convolutional Neural Networks"
-  authors:
-    - Cong Zhang
-    - Hongsheng Li
-    - Xiaogang Wang
-    - Xiaokang Yang
-  year: 2015
-  venue: "CVPR 2015"
-  doi: "10.1109/CVPR.2015.7298684"
-  link: "https://www.ee.cuhk.edu.hk/~xgwang/papers/zhangLWYcvpr15.pdf"
-  pdf: "https://www.ee.cuhk.edu.hk/~xgwang/papers/zhangLWYcvpr15.pdf"
-  tldr: 用 CNN 學密度圖做人群計數，換到新場景時不用重新標註，改從訓練資料檢索相似樣本來微調
+link: https://www.ee.cuhk.edu.hk/~xgwang/papers/zhangLWYcvpr15.pdf
 ---
 
 ## 使用方法

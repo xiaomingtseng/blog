@@ -21,31 +21,8 @@ layout: base.njk
     <article>
       <div class="post-type-label" style="color:var(--c-lit)">文獻筆記</div>
 
-      {% if paper %}
-      <div class="paper-card">
-        <div class="paper-eyebrow">PAPER</div>
-        <div class="paper-title">{{ paper.title }}</div>
-        <div class="paper-authors">
-          <span>{% if paper.authors is string %}{{ paper.authors }}{% else %}{{ (paper.authors or []) | join(", ") }}{% endif %}</span>
-          <span class="sep">·</span>
-          <span style="font-family:var(--font-mono)">{{ paper.year }}</span>
-          {% if paper.venue %}<span class="sep">·</span><span class="venue">{{ paper.venue }}</span>{% endif %}
-        </div>
-        {% if paper.tldr %}
-        <div class="paper-tldr">
-          <span class="lbl">TL;DR</span>
-          <span class="txt">{{ paper.tldr }}</span>
-        </div>
-        {% endif %}
-        <div class="paper-links">
-          {% if paper.link %}<a class="primary" href="{{ paper.link }}">論文 ↗</a>{% endif %}
-          {% if paper.pdf %}<a class="secondary" href="{{ paper.pdf }}">PDF</a>{% endif %}
-          {% if paper.doi %}<a class="secondary" href="https://doi.org/{{ paper.doi }}">DOI</a>{% endif %}
-        </div>
-      </div>
-      {% else %}
       <h1 class="post-title">{{ title }}</h1>
-      {% endif %}
+      {% if link %}<div class="paper-links"><a class="primary" href="{{ link }}">論文 ↗</a></div>{% endif %}
 
       <div class="post-tags" style="margin-top:14px">
         {% for tag in tags %}<a href="/notes/?tag={{ tag }}">#{{ tag }}</a>{% endfor %}
