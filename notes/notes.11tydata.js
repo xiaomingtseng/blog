@@ -3,14 +3,22 @@
 import path from "node:path";
 import { TYPES } from "../eleventy.config.js";
 
+// npm run dev（eleventy --serve）時草稿照樣輸出，方便本機預覽；正式 build 不輸出
+const isServe = process.env.ELEVENTY_RUN_MODE === "serve";
+
 export default {
   layout: "post.njk",
-  permalink: "/notes/{{ page.fileSlug }}/index.html",
   // 沒寫 date 的筆記用「第一次 commit 進 git 的日期」；還沒 commit 的檔案 Eleventy 會退回現在時間。
   // （CI 的 checkout 要 fetch-depth: 0 才拿得到完整歷史，見 deploy.yml）
   date: "git Created",
   // frontmatter 沒寫才補：讓「什麼都沒寫」的筆記也能正確顯示
   eleventyComputed: {
+    // 草稿完全不產生頁面（不只是從列表隱藏）；inbox.11tydata.js 設的 permalink: false 也在這裡保留
+    permalink: (data) => {
+      if (data.permalink === false) return false;
+      if (data.draft && !isServe) return false;
+      return `/notes/${data.page.fileSlug}/index.html`;
+    },
     // type 從資料夾推：notes/<type>/xxx.md；不是 TYPES 裡的資料夾（例如 inbox）就維持原值
     type: (data) => {
       if (data.type) return data.type;

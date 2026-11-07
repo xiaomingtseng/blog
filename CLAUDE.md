@@ -35,19 +35,22 @@ If this ever moves to a root domain (e.g. renaming the repo to `xiaomingtseng.gi
 Everything site-wide lives at the top of [eleventy.config.js](eleventy.config.js):
 
 - `SITE` — title, description, canonical url, author, github link (used across templates via `SITE.*` global data).
-- `TYPES` — the four content types (`research`, `literature`, `idea`, `life`), each with a `label` and a `color` that must stay in sync with the `--c-*` CSS custom properties in [assets/style.css](assets/style.css) (templates reference colors as `var(--c-lit)` for literature, `var(--c-{{ type }})` for the rest).
+- `TYPES` (exported) — the three content types (`research`, `literature`, `essay`), each with a `label` and a `color` that must stay in sync with the `--c-*` CSS custom properties in [assets/style.css](assets/style.css) (templates reference colors as `var(--c-lit)` for literature, `var(--c-{{ type }})` for the rest).
 
 ## Content model
 
 Notes live under `notes/<type>/*.md`, one subfolder per entry in `TYPES`. Layout and permalink defaults cascade through Eleventy's directory data files:
 
-- `notes/notes.11tydata.js` — applies to every note: `layout: post.njk`, `permalink: /notes/{{ page.fileSlug }}/index.html`.
-- `notes/literature/literature.11tydata.js` — overrides `layout: paper.njk` for that subfolder only (adds the paper-card header). Only `literature/` currently overrides the default; `idea/` and `life/` still render through `post.njk`. To give another type its own layout, add a matching `<type>/<type>.11tydata.js` and a new `_includes/<type>.njk`, following the literature example.
-- `notes/attachments/` — Obsidian image attachments, passthrough-copied to `/attachments`.
+- `notes/notes.11tydata.js` — applies to every note: `layout: post.njk`, a computed `permalink` of `/notes/<fileSlug>/index.html` (returns `false` for `draft: true` notes in production builds, so drafts aren't published at all — under `eleventy --serve` they still render for local preview), `date: "git Created"` (first-commit date; the deploy workflow checks out with `fetch-depth: 0` for this). Its `eleventyComputed` fills `type` from the folder name (only if the folder is a `TYPES` key; it imports `TYPES` from `eleventy.config.js`) and `title` from the filename when frontmatter omits them. Frontmatter always wins. Permalinks don't depend on the folder, so moving a note between type folders keeps its URL.
+- `notes/literature/literature.11tydata.js` — overrides `layout: paper.njk` for that subfolder only (adds the paper-card header). Only `literature/` currently overrides the default; `research/` and `essay/` render through `post.njk`. To give another type its own layout, add a matching `<type>/<type>.11tydata.js` and a new `_includes/<type>.njk`, following the literature example.
+- `notes/inbox/` — capture-first inbox (Obsidian's new-note location, set in `.obsidian/app.json`). `inbox.11tydata.js` sets `draft: true` + `permalink: false`, so nothing there is published or collected. Notes get organized later by moving them into a type folder.
+- `_templates/` — Obsidian core-Templates files (`note.md`, `literature.md`; configured in `.obsidian/templates.json`, Alt+T hotkey). Listed in `.eleventyignore` because Eleventy's input is `.` and their `{{title}}` placeholders would otherwise be parsed by Nunjucks. Templates deliberately omit `type` (inferred from folder).
+- `notes/attachments/` — Obsidian image attachments, passthrough-copied to `/attachments`. Embeds must use the bare filename (`![[x.png]]`), not a path — the attachment map is keyed by filename only.
+- `paper.authors` must be a YAML list — `paper.njk` pipes it through `join`.
 
 Frontmatter schema (see [README.md](README.md) for the full example): `title`, `type`, `date`, `updated` (optional), `tags`, `summary`, `draft`, `math` (set `true` to load KaTeX CSS on that page). Literature notes additionally take a `paper: { title, authors, year, venue, doi, link, pdf, tldr }` block consumed by `paper.njk`'s paper-card.
 
-Draft filtering, type collections, and the tag list are all derived in `eleventy.config.js` from `collections.posts` — there's a single `published()` helper that filters out `data.draft` before every collection is built (`posts`, one per `TYPES` key, `allTags`, `searchIndex`).
+Draft filtering, type collections, and the tag list are all derived in `eleventy.config.js` from `collections.posts` — there's a single `published()` helper that filters out `data.draft` before every collection is built (separately, the computed permalink keeps draft pages from being written out) (`posts`, one per `TYPES` key, `allTags`, `searchIndex`).
 
 ## Templates (`_includes/`)
 

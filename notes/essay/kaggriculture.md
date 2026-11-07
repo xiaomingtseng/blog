@@ -1,11 +1,11 @@
 ---
 title: kaggriculture
-type: idea
+type: essay
 date: 2026-08-30
 tags:
   - Kaggle
   - idea
-summary: 頭好痛
+summary: Kaggle 農業模擬競賽的策略程式架構草稿（頭好痛）
 draft: false
 ---
 

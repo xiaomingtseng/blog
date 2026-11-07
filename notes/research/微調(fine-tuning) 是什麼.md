@@ -5,12 +5,12 @@ date: 2026-06-28
 updated: 2026-06-29
 tags:
   - 遷移學習
+  - PEFT
+  - 概念
 summary: 從概念出發，尋找出架構所適合的微調策略、並發現新大陸
 draft: false
 math: true
 ---
-
-## 微調 (Fine-tuning) 筆記整理
 
 ### 快速理解
 

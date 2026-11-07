@@ -5,12 +5,18 @@ date: 2026-10-04
 tags:
   - 文獻
   - Crowd Counting
-summary: 這是一篇 crowd counting（人群計數）的 survey，引用 220 多篇文獻，聚焦在 CNN + density map（密度圖）這條路線。作者想說明的不只是「哪些方法有效」，而是「為什麼有效」，並主張這些技術可以推廣到車輛、細胞、動物等其他計數任務。
+  - 密度圖
+summary: 聚焦 CNN + 密度圖路線的人群計數 survey，說明哪些方法有效、為什麼有效
 draft: true
 math: true
 paper:
   title: "CNN-based Density Estimation and Crowd Counting: A Survey"
-  authors: Guangshuai Gao, Junyu Gao, Qingjie Liu, Qi Wang, Yunhong Wang
+  authors:
+    - Guangshuai Gao
+    - Junyu Gao
+    - Qingjie Liu
+    - Qi Wang
+    - Yunhong Wang
   year: 2020
   venue: arXiv preprint (cs.CV), arXiv:2003.12783v1
   doi: 10.48550/arXiv.2003.12783
@@ -47,7 +53,7 @@ paper:
 **5. 開放問題（第 VI 節）**  
 密度圖生成方式、損失函數、密度圖品質、**domain gap**（跨資料集 MAE 上升約 45%）、背景干擾、通用計數模型、輕量化、影像與影片結合、多視角、定位與追蹤、微小物體計數。
 
-### 三、如何閱讀（依目的）
+### 如何閱讀（依目的）
 
 **目的 A：快速建立整體概念（約 30 分鐘）**
 
@@ -67,7 +73,7 @@ paper:
 **目的 C：找實作與資料集**  
 第 III 節的 Table III 與第 V 節的 Table IV，GitHub 連結在摘要與 VI-B。
 
-### 四、閱讀時的注意事項
+### 閱讀時的注意事項
 
 - **可以跳過**：Table II、Table IV 的逐筆數字，除非你要找 baseline；Table I（前人 survey 列表）只需瀏覽。
 - **時效**：這是 **2020 年 3 月**的版本（v1），不含 Transformer、點監督定位（如 P2PNet）、CLIP-based 計數等 2021 年後的發展。要讀最新進展需另找較新的 survey。

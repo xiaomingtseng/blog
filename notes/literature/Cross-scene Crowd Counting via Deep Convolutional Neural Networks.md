@@ -5,26 +5,23 @@ date: 2026-09-19
 tags:
   - 文獻
   - Crowd Counting
-summary: 利用密度圖取代單純的計數分析，密度圖有疏密特性優於手動計數，使得局部計數也可以應用
+  - 密度圖
+summary: 用密度圖取代單純的計數，密度圖保留疏密分佈，所以連局部計數也做得到
 draft: false
 math: true
 paper:
   title: "Cross-scene Crowd Counting via Deep Convolutional Neural Networks"
-  authors: "Cong Zhang, Hongsheng Li, Xiaogang Wang, Xiaokang Yang"
+  authors:
+    - Cong Zhang
+    - Hongsheng Li
+    - Xiaogang Wang
+    - Xiaokang Yang
   year: 2015
   venue: "CVPR 2015"
   doi: "10.1109/CVPR.2015.7298684"
   link: "https://www.ee.cuhk.edu.hk/~xgwang/papers/zhangLWYcvpr15.pdf"
   pdf: "https://www.ee.cuhk.edu.hk/~xgwang/papers/zhangLWYcvpr15.pdf"
-  tldr: 改良crowd counting
----
-
-# 論文內化筆記
-
-## 《Cross-scene Crowd Counting via Deep Convolutional Neural Networks》
-
-Zhang, Li, Wang, Yang — CVPR 2015
-
+  tldr: 用 CNN 學密度圖做人群計數，換到新場景時不用重新標註，改從訓練資料檢索相似樣本來微調
 ---
 
 ## 使用方法

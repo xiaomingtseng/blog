@@ -1,6 +1,15 @@
-# KDMG 論文導讀：可學習的密度圖生成
-
-Oct 19, 2026 · @Brian Tseng
+---
+title: KDMG 論文導讀：可學習的密度圖生成
+type: literature
+date: 2026-10-19
+tags:
+  - 文獻
+  - Crowd Counting
+  - 密度圖
+summary: 計數用的密度圖不該由人工設計，而應該和計數網路一起學出來
+draft: false
+math: false
+---
 
 ## 1. Intro：問題在哪？
 

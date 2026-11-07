@@ -13,16 +13,18 @@ your-repo/
 ├─ eleventy.config.js             # 分類、標籤、RSS、搜尋索引、KaTeX、閱讀時間
 ├─ package.json
 ├─ notes/                         # ← 你的 Obsidian vault 放這（或 symlink）
-│   ├─ notes.11tydata.js          # 資料夾層級預設：layout=post.njk + permalink
-│   ├─ research/*.md
+│   ├─ notes.11tydata.js          # 資料夾層級預設：layout、permalink；沒寫的 type/title/date 自動補
+│   ├─ inbox/                     # 收件匣：新筆記先丟這，不用 frontmatter，不會發布
+│   │   └─ inbox.11tydata.js      # draft: true + permalink: false
+│   ├─ research/*.md              # 研究：概念整理（tag 概念）、週報/會議（tag 週報）
 │   ├─ literature/*.md
 │   │   └─ literature.11tydata.js # 覆寫 layout=paper.njk（文獻筆記論文卡）
-│   ├─ idea/*.md                  # 目前沿用 post.njk，之後想加專屬版型就比照 literature 做法
-│   ├─ life/*.md
+│   ├─ essay/*.md                 # 隨筆：想法、心情、生活
 │   └─ attachments/               # Obsidian 圖片附件 → 會複製到 /attachments
+├─ _templates/                    # Obsidian 範本（note.md / literature.md），已被 .eleventyignore 排除
 ├─ _includes/
 │   ├─ base.njk    # 外殼：側欄導覽、搜尋框、深色模式、footer
-│   ├─ home.njk    # 首頁：四類型卡片
+│   ├─ home.njk    # 首頁：三類型卡片
 │   ├─ list.njk    # /notes/ 全部筆記，類型 + 標籤過濾（前端 JS，網址可分享）
 │   ├─ post.njk    # 單篇文章：左側 sticky 目錄、footnote、上下篇、相關文章
 │   └─ paper.njk   # 文獻筆記：頂部論文卡（標題/作者/年份/TL;DR/連結）
@@ -37,14 +39,29 @@ your-repo/
 └─ search-index.njk    # build 時輸出 /search-index.json
 ```
 
+## 寫筆記的流程：先記下來，之後再整理
+
+1. **記**：在 Obsidian 按「新筆記」，檔案會自動建在 `notes/inbox/`（`.obsidian/app.json` 設定）。什麼都不用寫，收件匣的筆記不會發布。
+2. **整理**（例如每週一次）：把筆記搬到 `research/`、`literature/` 或 `essay/`，按 **Alt+T** 插入範本（`_templates/note.md` 或 `literature.md`），title 和 date 會自動填好。補上 tags 和 summary，然後把 `draft` 改成 `false`。
+3. **push**：網站就會更新。
+
+frontmatter 沒寫的欄位，build 時會自動補上（見 `notes/notes.11tydata.js`）：
+- `type`：用所在的資料夾名稱。
+- `title`：用檔名。
+- `date`：用第一次 commit 進 git 的日期。
+
+所以範本裡不放 `type`，之後搬資料夾也不用再改 frontmatter。
+
+`draft: true` 的筆記在正式 build 完全不產生頁面（不只是從列表隱藏），`npm run dev` 時則照樣顯示，方便本機預覽。
+
 ## 每篇筆記的 frontmatter schema
 
-**一般筆記**（research / idea / life，用 `post.njk`）：
+**一般筆記**（research / essay，用 `post.njk`）：
 
 ```yaml
 ---
 title:   標題
-type:    research           # research | literature | idea | life
+type:    research           # research | literature | essay（選填，預設用資料夾名）
 date:    2026-06-28
 updated: 2026-06-29         # 選填
 tags:    [CV, YOLO, 養殖]
@@ -98,6 +115,6 @@ npm run dev      # http://localhost:8080，存檔即重載
 
 ## 之後想擴充
 
-- **idea / life 專屬版型**：目前沿用 `post.njk`，如果想要不同排版，比照 `notes/literature/literature.11tydata.js` 的做法，在對應資料夾放一個 `xxx.11tydata.js` 覆寫 `layout`，再新增一支 `_includes/xxx.njk`。
+- **隨筆專屬版型**：目前沿用 `post.njk`，如果想要不同排版，比照 `notes/literature/literature.11tydata.js` 的做法，在對應資料夾放一個 `xxx.11tydata.js` 覆寫 `layout`，再新增一支 `_includes/xxx.njk`。
 - **標籤頁**（例如 `/tags/CV/`）：目前標籤過濾是在 `/notes/` 頁面用前端 JS 做的（網址 `?tag=CV` 可分享），如果想要每個標籤有獨立靜態頁面（SEO 更好），可以用 Eleventy 的 `addCollection` + pagination 另外產生。
 - **搜尋升級成語意搜尋**：現在是 Fuse.js 關鍵字模糊搜尋，之後想做 embedding-based 語意搜尋需要另外接一個小 API，不影響靜態網站本體。
