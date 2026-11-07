@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/inbox/八種估計模型.md",
+                "file": "notes/inbox/文學計畫.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "八種估計模型"
+              "title": "文學計畫"
             }
           }
         ]
@@ -209,10 +209,10 @@
   },
   "active": "94403ef672838beb",
   "lastOpenFiles": [
+    "notes/inbox/八種估計模型.md",
     "notes/attachments/Pasted image 20261107214759.png",
     "README.md",
     "notes/research/LoRA演進.md",
-    "notes/inbox/八種估計模型.md",
     "notes/research/NOV.  第一周會議後續.md",
     "notes/research/KL散度.md",
     "notes/research/計算機攝影學 (Computational Photography).md",
@@ -254,7 +254,6 @@
     "_site/attachments/Pasted image 20260907213133.png",
     "_site/attachments/pca_cosine_similarity_concept.png",
     "_site/attachments/Pasted image 20260907211601.png",
-    "_site/attachments/Pasted image 20260907211043.png",
-    "_site/attachments/Pasted image 20260907210954.png"
+    "_site/attachments/Pasted image 20260907211043.png"
   ]
 }
