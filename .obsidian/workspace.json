@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/life/北海道大學入學申請.md",
+                "file": "notes/research/NOV.  第一周進展.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "北海道大學入學申請"
+              "title": "NOV.  第一周進展"
             }
           }
         ],
@@ -222,14 +222,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0660b227451be15f",
+  "active": "157bf0a83275b3ce",
   "lastOpenFiles": [
     "notes/research/微調(fine-tuning) 是什麼.md",
+    "notes/life/北海道大學入學申請.md",
+    "notes/research/本周報告事項.md",
+    "notes/essay/北海道大學入學申請.md",
+    "notes/essay/碩零準備.md",
+    "notes/essay/kaggriculture.md",
+    "_templates/literature.md",
+    "_templates/note.md",
+    "notes/inbox/inbox.11tydata.js",
+    "_templates",
+    "notes/essay",
+    "notes/inbox",
+    "sedAd6QRf",
+    "seda5yy3Q",
+    "seddjYXuh",
+    "assets/sedaG8xdD",
     "notes/research/NOV.  第一周進展.md",
     "notes/attachments/Pasted image 20261106235509.png",
     "notes/idea/碩零準備.md",
     "notes/idea/kaggriculture.md",
-    "notes/life/北海道大學入學申請.md",
     "notes/literature/CNN-based Density Estimation and CrowdCounting  A Survey.md",
     "notes/literature/Cross-scene Crowd Counting via Deep Convolutional Neural Networks.md",
     "notes/research/純紀錄.md",
@@ -245,7 +259,6 @@
     "notes/literature/1LoRA.md",
     "notes/literature/3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation.md",
     "2026-09-19.md",
-    "2026-06-28.md",
     "notes/attachments/Pasted image 20260908161757.png",
     "未命名.canvas",
     "notes/attachments/Pasted image 20260908115906.png",
@@ -257,18 +270,6 @@
     "_site/attachments/Pasted image 20260907211043.png",
     "_site/attachments/Pasted image 20260907210954.png",
     "_site/notes/CMA-ES/index.html",
-    "_site/notes/CMA-ES",
-    "_site/notes/LoRA演進/index.html",
-    "_site/notes/LoRA演進",
-    "_site/notes/kaggriculture/index.html",
-    "_site/notes/kaggriculture",
-    "_site/Clippings/Predicting Student Health Risk/index.html",
-    "_site/Clippings/Predicting Student Health Risk",
-    "_site/Clippings/Biohub - Cell Tracking During Development 3/index.html",
-    "_site/Clippings/Biohub - Cell Tracking During Development 3",
-    "2026-07-13.md",
-    "Clippings/Biohub - Cell Tracking During Development.md",
-    "notes/literature/3DeeCellTracker a deep learning-based pipeline for segmenting and tracking cells in 3D time lapse images.md",
-    "notes/literature/nnU-Net a self-configuring method for deep learning-based biomedical image segmentation.md"
+    "_site/notes/CMA-ES"
   ]
 }

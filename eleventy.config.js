@@ -72,12 +72,11 @@ const SITE = {
   github: "https://github.com/xiaomingtseng",        // ← 側欄 GitHub 連結
 };
 
-// 四個文章類型（type facet）；顏色對齊版型的 --c-* token
-const TYPES = {
+// 三個文章類型（type facet）；顏色對齊版型的 --c-* token
+export const TYPES = {
   research:   { label: "研究筆記",   color: "#3b5bdb" },
   literature: { label: "文獻筆記",   color: "#0b8a6b" },
-  idea:       { label: "想法 / 靈感", color: "#c2410c" },
-  life:       { label: "留學生活",   color: "#7c3aed" },
+  essay:      { label: "隨筆",       color: "#c2410c" },
 };
 
 export default function (eleventyConfig) {

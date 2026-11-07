@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 完整 git 歷史，給 date: "git Created" 用
 
       - uses: actions/setup-node@v4
         with:
