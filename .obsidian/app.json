@@ -5,5 +5,6 @@
   ],
   "attachmentFolderPath": "notes/attachments",
   "newFileLocation": "folder",
-  "newFileFolderPath": "notes/inbox"
+  "newFileFolderPath": "notes/inbox",
+  "promptDelete": false
 }
