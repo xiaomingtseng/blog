@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,10 +236,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "318e5a5746b7e36a",
+  "active": "1c789b07444b8fb0",
   "lastOpenFiles": [
-    "notes/inbox/11-10會議後問題.md",
     "notes/inbox/可以搞事的.md",
+    "notes/inbox/11-10會議後問題.md",
     "notes/inbox/八種估計模型.md",
     "Clippings/Multi-scale MBES features, GBDTCNN ensemble, targeted flips.md",
     "Clippings/1st Place Solution.md",

@@ -1,5 +1,6 @@
 {
   "cssTheme": "Minimal",
   "accentColor": "",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "showRibbon": true
 }
