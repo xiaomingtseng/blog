@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/inbox/最佳化演算法報告須釐清部分.md",
+                "file": "notes/inbox/11-10會議後問題.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "最佳化演算法報告須釐清部分"
+              "title": "11-10會議後問題"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.4738655090332,
-    "collapsed": true
+    "width": 256.4738655090332
   },
   "right": {
     "id": "389e2b9a5225aa4c",
