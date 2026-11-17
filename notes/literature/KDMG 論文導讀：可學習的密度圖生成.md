@@ -4,7 +4,6 @@ type: literature
 date: 2026-10-19
 tags:
   - 文獻
-  - Crowd Counting
   - 密度圖
 summary: 計數用的密度圖不該由人工設計，而應該和計數網路一起學出來
 draft: false
