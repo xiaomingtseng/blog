@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,12 +236,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4198c211eed2e3be",
+  "active": "dc18cb275257ed00",
   "lastOpenFiles": [
-    "notes/inbox/11-24會議紀錄.md",
-    "notes/inbox/日本食物清單.md",
-    "notes/inbox/11-17會議紀錄.md",
     "notes/inbox/11-10會議後問題.md",
+    "notes/inbox/日本食物清單.md",
+    "notes/inbox/11-24會議紀錄.md",
+    "notes/inbox/11-17會議紀錄.md",
     "notes/literature/KDMG 論文導讀：可學習的密度圖生成.md",
     "notes/literature/CMA-ES.md",
     "notes/research/NOV.  第一周會議後續.md",
